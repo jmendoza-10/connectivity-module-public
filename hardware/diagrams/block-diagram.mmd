@@ -1,0 +1,65 @@
+flowchart TB
+  %% Connectivity Module - TARGET / spin-2 architecture (rev 0.2)
+  %% Dashed boxes = deferred in spin 1 (bench)
+  subgraph PWR["Power (12 V vehicle)"]
+    VIN["12 V KL30 / KL15<br/>TVS + LM74800-Q1<br/>(reverse + OVP / load dump)"]
+    PRE["5 V / 3.3 V system bucks"]
+    PMIC["PF09 + PF53 (on SoM)"]
+    VIN --> PRE --> PMIC
+  end
+
+  subgraph HOST["Host: i.MX 95 19x19 (Compulab MCM-iMX95 SoM)"]
+    SOC["6x A55 + M7 + M33<br/>LPDDR5 + eMMC on SoM"]
+  end
+  PMIC --> SOC
+
+  subgraph WWAN["Triple-modem WWAN (bonding)"]
+    PSW["Diodes PI7C9X3G606GP(Q)<br/>PCIe Gen3 switch<br/>x1 up / 5x x1 down<br/>int. refclk buffer"]
+    M1["5G modem 1<br/>RM520N-GL (M.2)<br/>→ AG55xQ (auto)"]
+    M2["5G modem 2"]
+    M3["5G modem 3"]
+    SP["2 spare x1 ports<br/>(NVMe / 4th radio)"]
+    B1["BUCK 3.7V/6A #1"]
+    B2["BUCK 3.7V/6A #2"]
+    B3["BUCK 3.7V/6A #3"]
+    SIM["3x SIM: nano-SIM (spin 1)<br/>MFF2 eSIM (spin 2)"]
+  end
+  SOC -- "PCIe #1 Gen3 x1" --> PSW
+  PSW --> M1
+  PSW --> M2
+  PSW --> M3
+  PSW -.-> SP
+  VIN --> B1 --> M1
+  VIN --> B2 --> M2
+  VIN --> B3 --> M3
+  SIM --- M1
+  SIM --- M2
+  SIM --- M3
+  SOC -. "PCIe #2 (free)" .-> SP
+
+  subgraph ETH["Automotive Ethernet (spin 2)"]
+    SW["NXP SJA1110A<br/>6x int. 100BASE-T1"]
+    T1G["2x TJA1120B<br/>1000BASE-T1"]
+    SATPHY["KSZ9131RNXV<br/>1000BASE-T"]
+    SAT["External sat terminal<br/>(Starlink-class)"]
+  end
+  SOC -- "10G SerDes<br/>SGMII 1G/2.5G" --> SW
+  SW -- SGMII --> T1G
+  SOC -- "1GbE RGMII" --> SATPHY --> SAT
+
+  WIFI["Wi-Fi 6 / BT 5.4<br/>JODY-W5 (AW611)"]
+  SOC -- "SDIO + UART" --> WIFI
+  GNSS["Standalone GNSS (spin 2)<br/>ZED-X20K / NEO-M9V<br/>spin 1: modem GNSS"]
+  GNSS -- "UART + 1PPS" --> SOC
+  NTN["Optional NTN modem<br/>BG95-S5 / SARA-S528NM10"]
+  SOC -. "UART / USB2" .-> NTN
+  CANX["5x TJA1463 CAN-FD"]
+  SOC -- "5x FlexCAN" --> CANX
+
+  ANT["Antennas: 12 cellular (3x 4x4)<br/>+ GNSS + 2 Wi-Fi + NTN<br/>HFM / FAKRA"]
+  M1 --- ANT
+  M2 --- ANT
+  M3 --- ANT
+
+  classDef deferred stroke-dasharray: 5 5,fill:#f7f7f7
+  class SW,T1G,SATPHY,NTN,CANX,GNSS,WIFI deferred

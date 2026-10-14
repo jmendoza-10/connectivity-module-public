@@ -1,0 +1,21 @@
+ERC report (Encoding UTF8)
+
+***** Sheet /
+
+***** Sheet /Power input: 12V protection + system rails/
+
+***** Sheet /WWAN slot supplies: 3x 3.7V 6A switchable bucks/
+
+***** Sheet /PCIe Gen3 switch PI7C9X3G606GP + x1 edge input/
+
+***** Sheet /M.2 Key-B WWAN slot 1 (EM9291/FN990) + nano-SIM/
+
+***** Sheet /M.2 Key-B WWAN slot 2 (EM9291/FN990) + nano-SIM/
+
+***** Sheet /M.2 Key-B WWAN slot 3 (EM9291/FN990) + nano-SIM/
+
+***** Sheet /USB3 hub USB5744 + USB-C upstream (HD3SS3220)/
+
+***** Sheet /Control: I2C GPIO expanders, host header, PG and status LEDs/
+
+ ** ERC messages: 0  Errors 0  Warnings 0

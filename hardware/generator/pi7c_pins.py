@@ -1,0 +1,38 @@
+# PI7C9X3G606GP FCA144 ball map, from Diodes DS43484 Rev 5-2 section 3 (pin description)
+P={}
+def a(names,balls,typ):
+    for n,b in zip(names,balls): 
+        assert b not in P,(b,n); P[b]=(n,typ)
+a(['REFCLKP1','REFCLKP0'],['L6','A6'],'input')
+a(['REFCLKN1','REFCLKN0'],['L7','A5'],'input')
+a(['RESREF'],['C6'],'passive')
+a([f'PERP{i}' for i in (5,4,3,2,1,0)],['M9','M7','M5','M3','A8','A10'],'input')
+a([f'PERN{i}' for i in (5,4,3,2,1,0)],['M10','M8','M6','M4','A7','A9'],'input')
+a([f'PETP{i}' for i in (5,4,3,2,1,0)],['K9','K7','K5','K3','C8','C10'],'output')
+a([f'PETN{i}' for i in (5,4,3,2,1,0)],['K10','K8','K6','K4','C7','C9'],'output')
+a(['PERST_L'],['A12'],'input')
+a(['CHIPMODE1','CHIPMODE0'],['G9','F9'],'input')
+a(['PORTCFG2','PORTCFG1','PORTCFG0'],['D11','C11','B11'],'input')
+a(['CKMODE'],['D9'],'input')
+a(['FATAL_ERR_L/HOT_PLUG_EN_L'],['E9'],'bidirectional')
+a(['INTA_L/PM_L11_EN_L'],['E1'],'bidirectional')
+a(['SHCL_I2C'],['L1'],'open_collector')
+a(['SHDA_I2C'],['M1'],'open_collector')
+a(['SHPCINT_L'],['M2'],'input')
+a([f'REFCLKOP{i}' for i in (7,6,5,4,1)],['C1','B2','B3','A4','A2'],'output')
+a([f'REFCLKON{i}' for i in (7,6,5,4,1)],['D1','C2','C3','A3','A1'],'output')
+a(['EECK'],['K12'],'bidirectional'); a(['EEDI'],['L11'],'output'); a(['EEDO'],['J12'],'input'); a(['EECS_L'],['M11'],'output')
+a(['SCL_I2C'],['L12'],'open_collector'); a(['SDA_I2C'],['M12'],'open_collector')
+a([f'PDC_L{i}' for i in (7,6,5,4,1)],['F2','G1','H1','J1','J2'],'input')
+gp=[23,22,21,20,19,18,17,15,14,13,12,9,8,7,6,5,4,3,2,1,0]
+gb=['G4','F3','F4','G3','J4','H3','G2','B5','C5','C4','D3','E4','E3','F1','H12','G12','F12','E12','D12','C12','B12']
+alt={23:'/HP_RST_L7',22:'/HP_RST_L6',21:'/HP_RST_L5',20:'/HP_RST_L4',17:'/HP_RST_L1',15:'/CLKREQ_L7',14:'/CLKREQ_L6',13:'/CLKREQ_L5',12:'/CLKREQ_L4',9:'/CLKREQ_L1',8:'/CLKREQ_L0',7:'/HP_LED7',6:'/HP_LED6',5:'/HP_LED5',4:'/HP_LED4',1:'/HP_LED1'}
+a([f'GPIO{g}{alt.get(g,"")}' for g in gp],gb,'bidirectional')
+a([f'PORTGOOD_L{i}' for i in (7,6,5,4,1,0)],['H11','G10','F10','G11','E10','E11'],'output')
+a(['TEST'],['E2'],'output')
+a(['NC']*4,['H2','H4','K1','L2'],'no_connect')
+a(['TCK'],['H9'],'input'); a(['TDI'],['J10'],'input'); a(['TDO'],['J11'],'output'); a(['TMS'],['H10'],'input'); a(['TRST_L'],['J9'],'input'); a(['JTAG_SEL_L'],['A11'],'input')
+a(['VDDC']*8,'E5 E7 F6 F8 G5 G7 H6 H8'.split(),'power_in')
+a(['C_VDDC'],['D4'],'power_in'); a(['VDDR']*2,['D10','J3'],'power_in'); a(['C_VDDR'],['D2'],'power_in')
+a(['VP']*4,'D6 D7 J6 J7'.split(),'power_in'); a(['VPH']*2,['D8','J5'],'power_in')
+a(['VSS']*26,'B1 B4 B6 B7 B8 B9 B10 D5 E6 E8 F5 F7 F11 G6 G8 H5 H7 J8 K2 K11 L3 L4 L5 L8 L9 L10'.split(),'power_in')

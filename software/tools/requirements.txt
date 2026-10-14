@@ -1,0 +1,2 @@
+smbus2>=0.4
+gpiod>=2.0   # libgpiod v2 Python bindings (or distro python3-libgpiod >= 2.0)

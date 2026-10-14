@@ -1,0 +1,35 @@
+name: checks
+# Keeps generated docs in sync with the schematic and runs KiCad ERC.
+# The ERC job uses the official KiCad 9 container; if it ever becomes flaky, drop that job - the
+# generated-docs check is the important one.
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  generated-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Interface doc / carrier_map.json / gpio-line-names are up to date with the netlist
+        run: python3 tools/gen_interface.py --check
+      - name: Python syntax
+        run: python3 -m py_compile software/tools/carrierctl.py tools/gen_interface.py
+
+  kicad-erc:
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:9.0.2   # pinned to match the generator box; newer 9.0.x stock libs changed 2N7002 + Crystal_GND24 and trip lib_symbol_mismatch
+      options: --user root
+    steps:
+      - uses: actions/checkout@v4
+      - name: ERC (must be 0 errors / 0 warnings)
+        run: |
+          kicad-cli sch erc --severity-all --exit-code-violations -o /tmp/erc.rpt hardware/kicad/wwan-carrier.kicad_sch || { cat /tmp/erc.rpt; exit 1; }
+          tail -3 /tmp/erc.rpt

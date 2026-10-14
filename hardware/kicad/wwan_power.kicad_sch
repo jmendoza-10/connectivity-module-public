@@ -1,0 +1,4622 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (generator_version "9.0")
+  (uuid "da3fe8d1-29bf-5922-82e7-99c6d29986af")
+  (paper "A2")
+  (title_block
+    (title "WWAN slot supplies: 3x 3.7V 6A switchable bucks")
+    (date "2026-10-10")
+    (rev "0.3")
+    (company "Jorge Mendoza - WWAN carrier (spin 1 bench prototype)")
+    (comment 1 "Generated schematic (auto-routed); rails = power symbols; inter-sheet = hier. labels")
+    (comment 2 "Datasheet-verified pinouts noted per sheet; items marked VERIFY are not yet confirmed"))
+  (lib_symbols
+    (symbol
+      "wwan_carrier:LM61460-Q1"
+      (pin_names (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "LM61460AASQRJRRQ1" (at 0 0 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "Datasheet"
+        "https://www.ti.com/lit/ds/symlink/lm61460-q1.pdf"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "Description"
+        "36V 6A sync buck, AEC-Q100 (drop-in for LMQ61460-Q1)"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "FP_TODO"
+        "TI RJR0014A VQFN-HR-14 4x3.5mm - create footprint from TI land pattern"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol
+        "LM61460-Q1_1_1"
+        (rectangle
+          (start -10.16 22.86)
+          (end 10.16 -27.94)
+          (stroke (width 0.254) (type default))
+          (fill (type background)))
+        (pin
+          power_in
+          line
+          (at -12.7 20.32 0)
+          (length 2.54)
+          (name "VIN" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at -12.7 20.32 0)
+          (length 2.54)
+          (hide yes)
+          (name "VIN" (effects (font (size 1.27 1.27))))
+          (number "12" (effects (font (size 1.27 1.27)))))
+        (pin
+          input
+          line
+          (at -12.7 12.7 0)
+          (length 2.54)
+          (name "EN/SYNC" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at -12.7 5.08 0)
+          (length 2.54)
+          (name "RT" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 12.7 20.32 180)
+          (length 2.54)
+          (name "RBOOT" (effects (font (size 1.27 1.27))))
+          (number "13" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 12.7 15.24 180)
+          (length 2.54)
+          (name "CBOOT" (effects (font (size 1.27 1.27))))
+          (number "14" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 12.7 10.16 180)
+          (length 2.54)
+          (name "SW" (effects (font (size 1.27 1.27))))
+          (number "10" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 12.7 5.08 180)
+          (length 2.54)
+          (name "BIAS" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin
+          input
+          line
+          (at 12.7 -2.54 180)
+          (length 2.54)
+          (name "FB" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 12.7 -10.16 180)
+          (length 2.54)
+          (name "VCC" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin
+          open_collector
+          line
+          (at 12.7 -17.78 180)
+          (length 2.54)
+          (name "PGOOD" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+        (pin
+          power_in
+          line
+          (at 0 -30.48 90)
+          (length 2.54)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 0 -30.48 90)
+          (length 2.54)
+          (hide yes)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "9" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 0 -30.48 90)
+          (length 2.54)
+          (hide yes)
+          (name "GND" (effects (font (size 1.27 1.27))))
+          (number "11" (effects (font (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol
+      "Device:R"
+      (pin_numbers (hide yes))
+      (pin_names (offset 0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R" (at 2.032 0 90) (effects (font (size 1.27 1.27))))
+      (property "Value" "R" (at 0 0 90) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at -1.778 0 90) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Description" "Resistor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_keywords" "R res resistor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_fp_filters" "R_*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol
+        "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type none))))
+      (symbol
+        "R_1_1"
+        (pin
+          passive
+          line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol
+      "Device:C"
+      (pin_numbers (hide yes))
+      (pin_names (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C" (at 0.635 2.54 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Value" "C" (at 0.635 -2.54 0) (effects (font (size 1.27 1.27)) (justify left)))
+      (property "Footprint" "" (at 0.9652 -3.81 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "Description"
+        "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_keywords" "cap capacitor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_fp_filters" "C_*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol
+        "C_0_1"
+        (polyline
+          (pts (xy -2.032 0.762) (xy 2.032 0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none)))
+        (polyline
+          (pts (xy -2.032 -0.762) (xy 2.032 -0.762))
+          (stroke (width 0.508) (type default))
+          (fill (type none))))
+      (symbol
+        "C_1_1"
+        (pin
+          passive
+          line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol
+      "Device:L"
+      (pin_numbers (hide yes))
+      (pin_names (offset 1.016) (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "L" (at -1.27 0 90) (effects (font (size 1.27 1.27))))
+      (property "Value" "L" (at 1.905 0 90) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Description" "Inductor" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "ki_keywords"
+        "inductor choke coil reactor magnetic"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "ki_fp_filters"
+        "Choke_* *Coil* Inductor_* L_*"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol
+        "L_0_1"
+        (arc
+          (start 0 2.54)
+          (mid 0.6323 1.905)
+          (end 0 1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 1.27)
+          (mid 0.6323 0.635)
+          (end 0 0)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 0)
+          (mid 0.6323 -0.635)
+          (end 0 -1.27)
+          (stroke (width 0) (type default))
+          (fill (type none)))
+        (arc
+          (start 0 -1.27)
+          (mid 0.6323 -1.905)
+          (end 0 -2.54)
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol
+        "L_1_1"
+        (pin
+          passive
+          line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin
+          passive
+          line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol
+      "power:PWR_FLAG"
+      (power)
+      (pin_numbers (hide yes))
+      (pin_names (offset 0) (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#FLG" (at 0 1.905 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Value" "PWR_FLAG" (at 0 3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "Description"
+        "Special symbol for telling ERC where power comes from"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_keywords" "flag power" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol
+        "PWR_FLAG_0_0"
+        (pin
+          power_out
+          line
+          (at 0 0 90)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))
+      (symbol
+        "PWR_FLAG_0_1"
+        (polyline
+          (pts (xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (embedded_fonts no))
+    (symbol
+      "Connector:TestPoint"
+      (pin_numbers (hide yes))
+      (pin_names (offset 0.762) (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TP" (at 0 6.858 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "TestPoint" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 5.08 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~" (at 5.08 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Description" "test point" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_keywords" "test point tp" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_fp_filters" "Pin* Test*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol
+        "TestPoint_0_1"
+        (circle (center 0 3.302) (radius 0.762) (stroke (width 0) (type default)) (fill (type none))))
+      (symbol
+        "TestPoint_1_1"
+        (pin
+          passive
+          line
+          (at 0 0 90)
+          (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol
+      "power:+3V3"
+      (power)
+      (pin_numbers (hide yes))
+      (pin_names (offset 0) (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR" (at 0 -3.81 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Value" "+3V3" (at 0 3.556 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "Description"
+        "Power symbol creates a global label with name \"+3V3\""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_keywords" "global power" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol
+        "+3V3_0_1"
+        (polyline (pts (xy -0.762 1.27) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 2.54) (xy 0.762 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 0) (xy 0 2.54)) (stroke (width 0) (type default)) (fill (type none))))
+      (symbol
+        "+3V3_1_1"
+        (pin
+          power_in
+          line
+          (at 0 0 90)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol
+      "power:GND"
+      (power)
+      (pin_numbers (hide yes))
+      (pin_names (offset 0) (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#PWR" (at 0 -6.35 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Value" "GND" (at 0 -3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (property
+        "Description"
+        "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "ki_keywords" "global power" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol
+        "GND_0_1"
+        (polyline
+          (pts (xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27))
+          (stroke (width 0) (type default))
+          (fill (type none))))
+      (symbol
+        "GND_1_1"
+        (pin
+          power_in
+          line
+          (at 0 0 270)
+          (length 0)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))))
+      (embedded_fonts no)))
+  (symbol
+    (lib_id "wwan_carrier:LM61460-Q1")
+    (at 165.1 81.28 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0a46c3cc-8b8d-53f7-afb2-eb680a7ae628")
+    (property "Reference" "U201" (at 152.93 113.36 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "LM61460AASQRJRRQ1" (at 152.93 115.16 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 165.1 81.28 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Datasheet"
+      "https://www.ti.com/lit/ds/symlink/lm61460-q1.pdf"
+      (at 165.1 81.28 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "36V 6A sync buck, AEC-Q100 (drop-in for LMQ61460-Q1)"
+      (at 165.1 81.28 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "LM61460AASQRJRRQ1"
+      (at 165.1 81.28 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Notes"
+      "Sub for LMQ61460AASQRJRRQ1 (backordered)"
+      (at 165.1 81.28 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "8" (uuid "f02b745d-2643-5d6e-aa38-00526b83e2f1"))
+    (pin "12" (uuid "87fb5aed-ae0c-5aef-9df1-f0630bbf591c"))
+    (pin "7" (uuid "64903b5b-dc67-5278-a224-615247b6d89f"))
+    (pin "6" (uuid "b6ac67df-8185-5763-93b5-e2422140a52d"))
+    (pin "13" (uuid "36f98bdc-ef97-576d-8b2d-eb3a41eaaa87"))
+    (pin "14" (uuid "41abe0a5-86c2-584b-9772-87d2f763d366"))
+    (pin "10" (uuid "1bebebed-1fd8-57e7-97a0-5834320ff737"))
+    (pin "1" (uuid "ac29b89e-d401-56e6-94b4-30ba902a5631"))
+    (pin "4" (uuid "060661a0-79aa-5f2d-a7c4-c6bab09b4226"))
+    (pin "2" (uuid "44916341-76ea-5a97-b2b8-b04c19d393da"))
+    (pin "5" (uuid "814a0fe4-ef5e-58d3-8f5d-7db582f5cadb"))
+    (pin "3" (uuid "06e7f855-78df-5d27-bfd1-09e1949d1fef"))
+    (pin "9" (uuid "101df267-0a16-5d71-9a9b-917ba5a1cc95"))
+    (pin "11" (uuid "677d5e18-a5cf-55e6-a190-7770849492e7"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "U201")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 121.92 72.39 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "01fcc8e5-ea83-5125-9fee-30193185951b")
+    (property "Reference" "R201" (at 117.364 71.12 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 117.364 73.66 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 121.92 72.39 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 121.92 72.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 121.92 72.39 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Notes" "default OFF" (at 121.92 72.39 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 121.92 72.39 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "56be96c6-b61d-523c-a65f-e5779fd1cbca"))
+    (pin "2" (uuid "c43a4c5c-55c9-59c4-bc87-4985635dbc5c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R201")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 143.51 76.2 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5c40de38-37a1-5ab5-b24e-da6643b08942")
+    (property "Reference" "R202" (at 143.51 73.584 270) (effects (font (size 1.27 1.27))))
+    (property "Value" "33.2k" (at 143.51 78.816 270) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 143.51 76.2 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 143.51 76.2 270) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 143.51 76.2 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-0733K2L (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 143.51 76.2 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "86c24c25-a074-5a82-9db9-e0e80af17662"))
+    (pin "2" (uuid "e1da4d0a-da6d-5a2b-87cd-a3a69096be74"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R202")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 121.92 46.99 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "39eb7e60-56bb-5eb8-99e2-6455817c35fc")
+    (property "Reference" "C201" (at 127.492 45.72 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "10uF/50V" (at 129.932 48.26 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 121.92 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 121.92 46.99 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 121.92 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 121.92 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "bd7aaf56-f369-591c-9123-64a070a9831e"))
+    (pin "2" (uuid "3c00b682-b20c-5cb1-b45d-8af3500645f2"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C201")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 104.14 46.99 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "cd6a9d5b-38ca-5bb1-80c9-2aeeb04ff305")
+    (property "Reference" "C202" (at 109.712 45.72 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "10uF/50V" (at 112.152 48.26 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 104.14 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 104.14 46.99 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 104.14 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 104.14 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "c11fa5a5-5d0d-5247-b9db-1262ade6d912"))
+    (pin "2" (uuid "253979a2-5fcb-5c81-be7d-7726ab61b9da"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C202")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 86.36 46.99 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9d958779-18f9-5a79-9a62-a8fa8a026d78")
+    (property "Reference" "C203" (at 91.932 45.72 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/50V" (at 94.982 48.26 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 86.36 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 86.36 46.99 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 86.36 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 86.36 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "78ba9c2d-0062-5249-83b0-d14b667ef7b4"))
+    (pin "2" (uuid "f51c4664-a36a-5852-9b04-0b70be693124"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C203")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 68.58 46.99 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c1b771da-3ed9-5dba-a140-69621dd20085")
+    (property "Reference" "C204" (at 74.152 45.72 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/50V" (at 77.202 48.26 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 68.58 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 68.58 46.99 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 68.58 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 68.58 46.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "342ec02a-df05-5ffe-bf5f-9ee17f9f28ae"))
+    (pin "2" (uuid "2ed03ef5-5ef8-5233-94c4-dc66b2339dce"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C204")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 186.69 50.8 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fb55b63a-e048-5f7d-bf5f-495e948ee011")
+    (property "Reference" "R203" (at 185.28 48.184 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "0" (at 189.93 48.184 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 186.69 50.8 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 186.69 50.8 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 186.69 50.8 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402JR-070RL (0R jumper)"
+      (at 186.69 50.8 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "7df61346-0040-56f2-9b2e-81b5d4114d34"))
+    (pin "2" (uuid "a3ab36b1-2230-5db7-ba19-5150e1637faa"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R203")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 199.39 50.8 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "3f4d9d09-331c-54f7-8b0c-32ec690db909")
+    (property "Reference" "C205" (at 199.39 45.368 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/16V" (at 199.39 47.168 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 199.39 50.8 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 199.39 50.8 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 199.39 50.8 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 199.39 50.8 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "4d26d69f-f79f-5d26-b928-7a091138a586"))
+    (pin "2" (uuid "53e6207d-73a7-5af8-99f7-975e4d0cfc00"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C205")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 184.15 91.44 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "57674d0a-a26b-505c-b30a-1cfb56c0d7be")
+    (property "Reference" "C206" (at 184.15 86.008 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF/16V" (at 184.15 87.808 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 184.15 91.44 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 184.15 91.44 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 184.15 91.44 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 184.15 91.44 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "65227978-5c1c-50aa-859a-86b6116a6266"))
+    (pin "2" (uuid "dbeb5acc-24ab-5fd4-ad16-f806f1f6895d"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C206")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 251.46 74.93 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a1a9eb96-e069-5bb5-9e8c-c164a16457b0")
+    (property "Reference" "C207" (at 257.032 73.66 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF/16V" (at 258.862 76.2 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 251.46 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 251.46 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 251.46 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 251.46 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "eb1a218e-220c-590e-9e80-0bcb7514608f"))
+    (pin "2" (uuid "c16dcd39-572b-5a45-baca-838675a4860b"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C207")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:L")
+    (at 214.63 71.12 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a798d240-c834-51c3-a7b0-2a1e87b693db")
+    (property "Reference" "L201" (at 214.63 67.088 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "3.3uH" (at 214.63 68.888 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Inductor_SMD:L_Coilcraft_XAL7070-XXX"
+      (at 214.63 71.12 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 214.63 71.12 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Inductor"
+      (at 214.63 71.12 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "MPN" "XAL7070-332MEB" (at 214.63 71.12 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "8a60607a-cc0e-5e3e-9acf-c88b7616f443"))
+    (pin "2" (uuid "bb350f6e-05e7-5364-beea-565d112b8e05"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "L201")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 226.06 77.47 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "036ef12f-4b43-561c-95e1-a4a1e575fc99")
+    (property "Reference" "R204" (at 230.616 76.2 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 230.616 78.74 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 226.06 77.47 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 226.06 77.47 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 226.06 77.47 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 226.06 77.47 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "84d6c398-6852-5311-bf72-fb7b81476feb"))
+    (pin "2" (uuid "7f8a14ee-8247-55d4-9cad-9d62a4897ac2"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R204")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 226.06 90.17 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c9984c04-07a4-5f78-8889-e5a852458623")
+    (property "Reference" "R205" (at 230.616 88.9 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "36.5k" (at 231.226 91.44 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 226.06 90.17 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 226.06 90.17 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 226.06 90.17 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-0736K5L (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 226.06 90.17 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "65880be3-53ff-51ac-84dd-21fc87bee0dc"))
+    (pin "2" (uuid "61565bb5-4f4b-5dc2-90f2-d18130abd07e"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R205")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 266.7 74.93 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f77a6222-15d3-51d1-a379-28798b273340")
+    (property "Reference" "C208" (at 272.272 73.66 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 274.712 76.2 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 266.7 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 266.7 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 266.7 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 266.7 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "c283173d-7077-53d2-abce-70eff35c14a8"))
+    (pin "2" (uuid "bf7d7f3e-1795-5914-ba09-6e6958b68a6d"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C208")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 284.48 74.93 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "d7004f22-250d-536c-830d-541ab3a40ea8")
+    (property "Reference" "C209" (at 290.052 73.66 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 292.492 76.2 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 284.48 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 284.48 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 284.48 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 284.48 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "752f8eb9-fea6-56e6-af83-abf82b77cc78"))
+    (pin "2" (uuid "c55d2243-db8f-5149-b517-e5be3bbbe9b3"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C209")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 302.26 74.93 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ad224db0-d55d-561e-917e-f284837862c9")
+    (property "Reference" "C210" (at 307.832 73.66 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 310.272 76.2 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 302.26 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 302.26 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 302.26 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 302.26 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "860d48d8-159c-528e-b87b-70f9b5997ef1"))
+    (pin "2" (uuid "8d5defce-50b1-5e03-86df-c0e33580f080"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C210")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 320.04 74.93 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5de1043c-0eef-5a06-a425-e6dc1b759382")
+    (property "Reference" "C211" (at 325.612 73.66 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 328.052 76.2 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 320.04 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 320.04 74.93 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 320.04 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 320.04 74.93 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "5f5ce4e6-b20d-545c-8e31-092c1d3feb55"))
+    (pin "2" (uuid "f4ed2999-2ca1-52e1-b75d-2619dada4c4f"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C211")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 203.2 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "4fd24d27-5c0c-51f4-9bd5-d1108c1664b8")
+    (property "Reference" "R206" (at 207.756 93.98 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 207.756 96.52 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 203.2 95.25 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 203.2 95.25 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "Resistor" (at 203.2 95.25 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 203.2 95.25 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "67c1e4b7-ce18-5d58-be3a-2a16b3a47f27"))
+    (pin "2" (uuid "c5f8402a-66e3-57df-9b32-f11a28bda3da"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R206")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:PWR_FLAG")
+    (at 340.36 71.12 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "7f0292cb-405e-57a9-963f-001c85d45404")
+    (property "Reference" "#FLG0009" (at 340.36 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 340.36 67.31 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 340.36 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 340.36 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Special symbol for telling ERC where power comes from"
+      (at 340.36 71.12 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6b939d41-2f6d-5856-a7b4-2978dd68b716"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#FLG0009")
+          (unit 1)))))
+  (symbol
+    (lib_id "Connector:TestPoint")
+    (at 347.98 71.12 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "6fdfc3fa-32a2-5ebc-8505-5536c29b4851")
+    (property "Reference" "TP201" (at 352.892 67.818 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "+3V7_S1" (at 354.112 70.358 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "TestPoint:TestPoint_Pad_D1.0mm"
+      (at 347.98 71.12 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 347.98 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "test point"
+      (at 347.98 71.12 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "f9fb7a2e-a74e-50fe-88ae-60276cc31d22"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "TP201")
+          (unit 1)))))
+  (symbol
+    (lib_id "wwan_carrier:LM61460-Q1")
+    (at 165.1 182.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "eecfaeed-c037-5287-9ecd-7cc88a6ec01b")
+    (property "Reference" "U202" (at 152.93 214.96 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "LM61460AASQRJRRQ1" (at 152.93 216.76 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 165.1 182.88 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Datasheet"
+      "https://www.ti.com/lit/ds/symlink/lm61460-q1.pdf"
+      (at 165.1 182.88 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "36V 6A sync buck, AEC-Q100 (drop-in for LMQ61460-Q1)"
+      (at 165.1 182.88 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "LM61460AASQRJRRQ1"
+      (at 165.1 182.88 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Notes"
+      "Sub for LMQ61460AASQRJRRQ1 (backordered)"
+      (at 165.1 182.88 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "8" (uuid "0698aa7a-25a5-5d3d-a22e-5f7a235f4f6d"))
+    (pin "12" (uuid "f6e135f5-434b-5ea6-a980-979db64f6a9a"))
+    (pin "7" (uuid "10b72f75-9439-5159-928e-1cd62d6de5f8"))
+    (pin "6" (uuid "596620d4-3143-5bef-8f2c-e53f90b90bbf"))
+    (pin "13" (uuid "f4ae80ee-588c-5ac8-94de-05e9215692ca"))
+    (pin "14" (uuid "7a6ae1cf-674c-5066-ae1c-b6404cd73975"))
+    (pin "10" (uuid "b577346f-a7a0-5f5b-8530-8d7c789d6000"))
+    (pin "1" (uuid "b42c347c-7dc8-5586-8b15-788648f8e3ec"))
+    (pin "4" (uuid "46e8ec87-7ad3-58eb-8786-f412d79bbd62"))
+    (pin "2" (uuid "320a1c34-17d4-5ccf-85fa-fcda80225fb7"))
+    (pin "5" (uuid "1b08d112-11cb-5f93-8585-bca24cbdd1e6"))
+    (pin "3" (uuid "fbaa5ff9-fcc5-55b4-ad8d-9412e914bf6b"))
+    (pin "9" (uuid "fafa12b3-8d9b-5977-8000-ca77e944baab"))
+    (pin "11" (uuid "55dc3e3a-03b5-5638-b021-ed4262596605"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "U202")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 121.92 173.99 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9ff512bf-7495-55c3-b204-ab2f2cd670e5")
+    (property "Reference" "R207" (at 117.364 172.72 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 117.364 175.26 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 121.92 173.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 121.92 173.99 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 121.92 173.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Notes" "default OFF" (at 121.92 173.99 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 121.92 173.99 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "c707e3f9-8394-5f81-94cf-280cd74be1d1"))
+    (pin "2" (uuid "c6c40c69-4806-5a92-9448-18ef072d5da2"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R207")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 143.51 177.8 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "07fe977d-0558-5847-ab12-9207126f2b95")
+    (property "Reference" "R208" (at 143.51 175.184 270) (effects (font (size 1.27 1.27))))
+    (property "Value" "33.2k" (at 143.51 180.416 270) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 143.51 177.8 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 143.51 177.8 270) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 143.51 177.8 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-0733K2L (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 143.51 177.8 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "165e6956-4b48-561f-8877-f91720daea15"))
+    (pin "2" (uuid "deb49795-5054-5fff-9209-184a505a24bb"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R208")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 121.92 148.59 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "1799c9a0-44ce-5157-b5b8-71bc62d95700")
+    (property "Reference" "C212" (at 127.492 147.32 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "10uF/50V" (at 129.932 149.86 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 121.92 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 121.92 148.59 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 121.92 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 121.92 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "66eabe88-1591-59fb-8b37-ea379e1e6770"))
+    (pin "2" (uuid "ce652ccf-749c-55ec-9b44-85deddffb789"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C212")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 104.14 148.59 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "4ec78541-785c-5222-9fc4-c31114f64129")
+    (property "Reference" "C213" (at 109.712 147.32 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "10uF/50V" (at 112.152 149.86 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 104.14 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 104.14 148.59 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 104.14 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 104.14 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "643cf7b6-7c64-55e3-ab3c-22070261259e"))
+    (pin "2" (uuid "9fc2ae31-5d78-5d37-8548-5747eb094f78"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C213")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 86.36 148.59 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a5017741-e452-5cc3-b426-6ffe3c92f6e4")
+    (property "Reference" "C214" (at 91.932 147.32 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/50V" (at 94.982 149.86 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 86.36 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 86.36 148.59 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 86.36 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 86.36 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "23d62583-8e31-5073-81a5-f6898075c72c"))
+    (pin "2" (uuid "fe7610d6-7f21-5cc3-ad1c-5fcbd1fef5d4"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C214")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 68.58 148.59 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a30c8aea-174d-523b-86fa-ed4bccc8a529")
+    (property "Reference" "C215" (at 74.152 147.32 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/50V" (at 77.202 149.86 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 68.58 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 68.58 148.59 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 68.58 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 68.58 148.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "74a2a6a4-59bc-50a5-a79f-ea9d8ff01347"))
+    (pin "2" (uuid "b9656deb-a86a-5d2d-8103-fbac6a2b830c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C215")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 186.69 152.4 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "95c84434-fa56-55c6-9cf4-9f34bcaa71b5")
+    (property "Reference" "R209" (at 185.28 149.784 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "0" (at 189.93 149.784 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 186.69 152.4 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 186.69 152.4 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 186.69 152.4 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402JR-070RL (0R jumper)"
+      (at 186.69 152.4 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "9a1ac71d-691c-5e4f-82d1-9088c8e56d53"))
+    (pin "2" (uuid "38b0833b-a0be-5638-bb19-d1ba010809d8"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R209")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 199.39 152.4 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "79843e92-a690-557c-8ed1-2abbe0cf5955")
+    (property "Reference" "C216" (at 199.39 146.968 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/16V" (at 199.39 148.768 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 199.39 152.4 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 199.39 152.4 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 199.39 152.4 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 199.39 152.4 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d2a81a40-1138-5c68-b24d-8df889b2bd24"))
+    (pin "2" (uuid "f7de6afc-6065-51b3-ba19-415b3000dc31"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C216")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 184.15 193.04 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ec7aa269-cd29-5705-8091-348f923806f0")
+    (property "Reference" "C217" (at 184.15 187.608 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF/16V" (at 184.15 189.408 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 184.15 193.04 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 184.15 193.04 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 184.15 193.04 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 184.15 193.04 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "777997ed-386a-5f59-a6a6-b088daccbf43"))
+    (pin "2" (uuid "d752b3fb-b3db-5476-94b1-726ee649c0ce"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C217")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 251.46 176.53 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "cc19a45b-e97a-580b-9ff7-b0b3931fb90f")
+    (property "Reference" "C218" (at 257.032 175.26 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF/16V" (at 258.862 177.8 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 251.46 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 251.46 176.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 251.46 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 251.46 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "58e35446-db90-5f8c-a348-881de2a84881"))
+    (pin "2" (uuid "ee99b26f-dd4d-559f-85aa-c0b4ce165dd7"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C218")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:L")
+    (at 214.63 172.72 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ebca5354-d3b1-5e0e-b0ff-48b742134e4e")
+    (property "Reference" "L202" (at 214.63 168.688 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "3.3uH" (at 214.63 170.488 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Inductor_SMD:L_Coilcraft_XAL7070-XXX"
+      (at 214.63 172.72 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 214.63 172.72 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Inductor"
+      (at 214.63 172.72 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "XAL7070-332MEB"
+      (at 214.63 172.72 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a208bd86-b298-57f8-a0c4-5ba5dd54c95b"))
+    (pin "2" (uuid "4cc3f0c5-c45c-580a-aca4-c916b007f79c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "L202")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 226.06 179.07 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9459e548-4973-5adf-9cc7-24043bd471c6")
+    (property "Reference" "R210" (at 230.616 177.8 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 230.616 180.34 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 226.06 179.07 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 226.06 179.07 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 226.06 179.07 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 226.06 179.07 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "78776245-1396-5c5e-94f0-274ec4d5b031"))
+    (pin "2" (uuid "014eebe6-0c4c-5ab9-8be5-49acd643c27a"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R210")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 226.06 191.77 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "30f57281-0f01-560a-84fc-3c6e8c13d9d1")
+    (property "Reference" "R211" (at 230.616 190.5 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "36.5k" (at 231.226 193.04 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 226.06 191.77 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 226.06 191.77 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 226.06 191.77 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-0736K5L (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 226.06 191.77 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a1d20d03-c472-52a8-bb03-9dc9603a4d67"))
+    (pin "2" (uuid "338f1364-bfd2-5454-96b8-81a941d4db55"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R211")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 266.7 176.53 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ca4f6423-07f4-557a-a27d-9a6823527a34")
+    (property "Reference" "C219" (at 272.272 175.26 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 274.712 177.8 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 266.7 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 266.7 176.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 266.7 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 266.7 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "e3bbf6c6-983a-5d69-a31e-4d3efa1e891e"))
+    (pin "2" (uuid "aa18f7a6-e852-503f-bb8f-e1d588387765"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C219")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 284.48 176.53 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "27ddc338-dc61-5ec1-a148-a638c44213b6")
+    (property "Reference" "C220" (at 290.052 175.26 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 292.492 177.8 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 284.48 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 284.48 176.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 284.48 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 284.48 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "bb3647eb-9f43-52c6-9db6-36ba46012dbb"))
+    (pin "2" (uuid "f14adfce-08c7-5b15-b49f-9e466bdf8bf1"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C220")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 302.26 176.53 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "305dbcdb-444a-527b-8fab-184baaa55b0e")
+    (property "Reference" "C221" (at 307.832 175.26 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 310.272 177.8 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 302.26 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 302.26 176.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 302.26 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 302.26 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d96dcb2c-d5d3-5e78-a270-48a0e89d8bd3"))
+    (pin "2" (uuid "ac9264f4-04c5-5d59-ae3f-3eed70dbce31"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C221")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 320.04 176.53 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "752ee5db-3d5c-5dba-bc10-c1741c966c19")
+    (property "Reference" "C222" (at 325.612 175.26 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 328.052 177.8 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 320.04 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 320.04 176.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 320.04 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 320.04 176.53 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "244bb056-4c07-5d3f-8d63-3d44f034943f"))
+    (pin "2" (uuid "056d277b-f581-55b9-97ba-c4f65737f0f3"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C222")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 203.2 196.85 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f8ceb456-20c2-5ed8-ae53-0540672fb7dd")
+    (property "Reference" "R212" (at 207.756 195.58 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 207.756 198.12 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 203.2 196.85 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 203.2 196.85 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 203.2 196.85 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 203.2 196.85 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "567850ce-870e-5c21-a3a1-7d00668d81e2"))
+    (pin "2" (uuid "2ce1b9a2-680a-5b98-9ee8-012638f1e5a4"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R212")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:PWR_FLAG")
+    (at 340.36 172.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "3c621741-3833-5464-b000-21cbb7ed126a")
+    (property "Reference" "#FLG0010" (at 340.36 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 340.36 168.91 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 340.36 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 340.36 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Special symbol for telling ERC where power comes from"
+      (at 340.36 172.72 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "9f79327f-1a28-53aa-8090-a385adadb107"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#FLG0010")
+          (unit 1)))))
+  (symbol
+    (lib_id "Connector:TestPoint")
+    (at 347.98 172.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "a337d88a-e677-5944-af99-80eb87fc0b1e")
+    (property "Reference" "TP202" (at 352.892 169.418 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "+3V7_S2" (at 354.112 171.958 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "TestPoint:TestPoint_Pad_D1.0mm"
+      (at 347.98 172.72 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 347.98 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "test point"
+      (at 347.98 172.72 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "2701f254-7475-561e-9713-b57f8c91b7e7"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "TP202")
+          (unit 1)))))
+  (symbol
+    (lib_id "wwan_carrier:LM61460-Q1")
+    (at 165.1 284.48 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9497fb35-d226-5041-bf59-ffa4d95e3164")
+    (property "Reference" "U203" (at 152.93 316.56 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "LM61460AASQRJRRQ1" (at 152.93 318.36 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 165.1 284.48 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Datasheet"
+      "https://www.ti.com/lit/ds/symlink/lm61460-q1.pdf"
+      (at 165.1 284.48 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "36V 6A sync buck, AEC-Q100 (drop-in for LMQ61460-Q1)"
+      (at 165.1 284.48 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "LM61460AASQRJRRQ1"
+      (at 165.1 284.48 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Notes"
+      "Sub for LMQ61460AASQRJRRQ1 (backordered)"
+      (at 165.1 284.48 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "8" (uuid "01603a87-06c9-5a5a-b9a2-3182476bd5dd"))
+    (pin "12" (uuid "13770753-5287-5345-bda4-4dc43af28ca8"))
+    (pin "7" (uuid "78c8eafd-6b24-5103-8e27-e8bc9694a598"))
+    (pin "6" (uuid "3a7e71d4-c7fa-5f1b-97d6-36d19c32bf56"))
+    (pin "13" (uuid "320d93f6-cf02-53ce-9e25-28f654666bd9"))
+    (pin "14" (uuid "64116b8b-d807-5beb-aedb-e01340bf58c9"))
+    (pin "10" (uuid "e1823dc6-d813-53f3-89ec-fe24a7538952"))
+    (pin "1" (uuid "2709dfb5-8279-5688-bb8a-9673420597b8"))
+    (pin "4" (uuid "ce8d2acc-b522-5b2b-b809-8b6a09598ccd"))
+    (pin "2" (uuid "fe5c9682-0c38-5a2f-88ff-b546d2764b75"))
+    (pin "5" (uuid "141190ce-6f8d-5b4f-b92a-93dc67f17b2a"))
+    (pin "3" (uuid "eed2f414-4495-5c41-b0b6-7d78a88c7dd0"))
+    (pin "9" (uuid "f10b65ea-070b-5837-884e-55914791fc65"))
+    (pin "11" (uuid "69e0236e-add1-5753-a7a3-f8367658b732"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "U203")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 121.92 275.59 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c7671116-cb65-56d2-bc37-6cce61a2f445")
+    (property "Reference" "R213" (at 117.364 274.32 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 117.364 276.86 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 121.92 275.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 121.92 275.59 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 121.92 275.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Notes" "default OFF" (at 121.92 275.59 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 121.92 275.59 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "4e51cfa2-3990-5a68-8588-b84a17c14bcd"))
+    (pin "2" (uuid "6d7c9a1c-a6d3-5a2d-9a76-a01070524a6c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R213")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 143.51 279.4 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7852b7af-a9ab-51eb-880c-ed7456267fb5")
+    (property "Reference" "R214" (at 143.51 276.784 270) (effects (font (size 1.27 1.27))))
+    (property "Value" "33.2k" (at 143.51 282.016 270) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 143.51 279.4 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 143.51 279.4 270) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 143.51 279.4 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-0733K2L (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 143.51 279.4 270)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "54b5e188-abf2-55fc-9978-76455f2991b3"))
+    (pin "2" (uuid "84b5778c-784a-5e7b-98f3-5f568ee6a239"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R214")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 121.92 250.19 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "60921ee1-7e73-5a56-8b84-d8a70bda7b04")
+    (property "Reference" "C223" (at 127.492 248.92 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "10uF/50V" (at 129.932 251.46 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 121.92 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 121.92 250.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 121.92 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 121.92 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6c5eb447-b5d1-5ef5-a857-8307d40de69e"))
+    (pin "2" (uuid "deb6267d-de1c-5ad5-887f-d66f7571e8f5"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C223")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 104.14 250.19 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c7a2a455-0599-59fb-845c-872651eb02e8")
+    (property "Reference" "C224" (at 109.712 248.92 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "10uF/50V" (at 112.152 251.46 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 104.14 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 104.14 250.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 104.14 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 104.14 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "367f345a-c3ef-5778-872b-df46050a71d5"))
+    (pin "2" (uuid "9233e8e6-f65f-558a-a576-3c9b83bbc623"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C224")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 86.36 250.19 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5380d2cd-2c9c-5529-9d85-b14cf0e352b4")
+    (property "Reference" "C225" (at 91.932 248.92 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/50V" (at 94.982 251.46 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 86.36 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 86.36 250.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 86.36 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 86.36 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "869eb006-435d-5d73-ae2f-c1af96d7e36c"))
+    (pin "2" (uuid "413d0823-fdd4-58b1-a7bb-03ead69572e4"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C225")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 68.58 250.19 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5b435304-31de-56a2-a380-0ec10babf7d8")
+    (property "Reference" "C226" (at 74.152 248.92 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/50V" (at 77.202 251.46 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 68.58 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 68.58 250.19 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 68.58 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 68.58 250.19 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "fbee7e83-da91-586e-9979-94c585a65611"))
+    (pin "2" (uuid "485a29ba-9d13-5ed7-96a1-b172554dbb6e"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C226")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 186.69 254 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "dfdcdc1a-8fb8-5784-bf07-eca8b8a715dd")
+    (property "Reference" "R215" (at 185.28 251.384 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "0" (at 189.93 251.384 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 186.69 254 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 186.69 254 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "Resistor" (at 186.69 254 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402JR-070RL (0R jumper)"
+      (at 186.69 254 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "e2ba1c09-37ba-5dd4-93a4-bcedb95ed079"))
+    (pin "2" (uuid "b91c2445-ae7e-5875-9eac-ae66287a501c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R215")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 199.39 254 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ad1e3928-d1b7-5026-8c8d-59e21f478b8c")
+    (property "Reference" "C227" (at 199.39 248.568 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF/16V" (at 199.39 250.368 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 199.39 254 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 199.39 254 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 199.39 254 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 199.39 254 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "dfacb17d-0791-51d0-a02b-91084905d7b7"))
+    (pin "2" (uuid "2dc15e99-e204-534d-bf79-80b734f2fc83"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C227")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 184.15 294.64 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "48cf8824-4513-51d0-a99e-89b005a3c1e7")
+    (property "Reference" "C228" (at 184.15 289.208 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF/16V" (at 184.15 291.008 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 184.15 294.64 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 184.15 294.64 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 184.15 294.64 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 184.15 294.64 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "3193624c-90b7-5db6-8365-169c98f9e1e0"))
+    (pin "2" (uuid "d90722cb-9537-5dc9-84bd-e9e98238b4b7"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C228")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 251.46 278.13 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "dedfed78-def2-58a8-b629-2e0c5ed97fbd")
+    (property "Reference" "C229" (at 257.032 276.86 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF/16V" (at 258.862 279.4 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_0402_1005Metric"
+      (at 251.46 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 251.46 278.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 251.46 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 251.46 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "69175956-ea49-55d7-a30d-24fdd9af96cd"))
+    (pin "2" (uuid "99550ab8-0518-5a2b-ab85-a596df246ff7"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C229")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:L")
+    (at 214.63 274.32 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "214b1093-b455-5ae2-8311-0fe228ee07ea")
+    (property "Reference" "L203" (at 214.63 270.288 90) (effects (font (size 1.27 1.27))))
+    (property "Value" "3.3uH" (at 214.63 272.088 90) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Inductor_SMD:L_Coilcraft_XAL7070-XXX"
+      (at 214.63 274.32 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 214.63 274.32 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Inductor"
+      (at 214.63 274.32 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "XAL7070-332MEB"
+      (at 214.63 274.32 90)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "86b68aca-98b5-5b68-9e03-385a67f81921"))
+    (pin "2" (uuid "d4bea219-82f8-54bd-bc00-4fe6f53a0421"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "L203")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 226.06 280.67 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "d97e82dd-e297-5e1d-bd9e-97bd62d65b44")
+    (property "Reference" "R216" (at 230.616 279.4 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 230.616 281.94 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 226.06 280.67 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 226.06 280.67 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 226.06 280.67 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 226.06 280.67 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "692024f7-d0a6-5735-b317-22849ad55b2e"))
+    (pin "2" (uuid "c501a3e2-581e-5770-aed1-147c8fd4e8aa"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R216")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 226.06 293.37 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5377bfa8-cf20-5963-8dc8-7dfd40823017")
+    (property "Reference" "R217" (at 230.616 292.1 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "36.5k" (at 231.226 294.64 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 226.06 293.37 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 226.06 293.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 226.06 293.37 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-0736K5L (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 226.06 293.37 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "43e7ba64-154a-53c9-89d4-e9758470b653"))
+    (pin "2" (uuid "02e6ac2b-314a-5c91-a581-1ee9de3292ff"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R217")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 266.7 278.13 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b33ca014-2a09-5a86-9f53-a1ee70ef3db2")
+    (property "Reference" "C230" (at 272.272 276.86 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 274.712 279.4 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 266.7 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 266.7 278.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 266.7 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 266.7 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "95c4684e-f718-568d-96f0-e38c7192f203"))
+    (pin "2" (uuid "e6119eb6-e1f9-59ed-abdd-0499271c06eb"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C230")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 284.48 278.13 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9ced8ae2-7069-5f14-ae2b-c2de9497b155")
+    (property "Reference" "C231" (at 290.052 276.86 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 292.492 279.4 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 284.48 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 284.48 278.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 284.48 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 284.48 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "37b92ba7-8abb-55c4-a6b0-5953270cbfd3"))
+    (pin "2" (uuid "2492a554-e116-5d66-964f-cd82c6f809da"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C231")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 302.26 278.13 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "028f593f-6a86-50f8-8157-70f062251e96")
+    (property "Reference" "C232" (at 307.832 276.86 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 310.272 279.4 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 302.26 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 302.26 278.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 302.26 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 302.26 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "94e35f97-7a7a-5f8a-8c6b-d324accaa90d"))
+    (pin "2" (uuid "88fc2d88-08c1-5f8e-9e0b-4e7528618a64"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C232")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:C")
+    (at 320.04 278.13 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "65b7da07-09e4-5ab1-ac1a-2d376f87760c")
+    (property "Reference" "C233" (at 325.612 276.86 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "22uF/10V" (at 328.052 279.4 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Capacitor_SMD:C_1210_3225Metric"
+      (at 320.04 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 320.04 278.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Unpolarized capacitor"
+      (at 320.04 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Murata GRM/GCM, TDK C/CGA or KEMET (X7R; C0G below 10nF) - no PRC brands"
+      (at 320.04 278.13 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "51b74bb0-084e-5f4a-82dc-98354247b6d0"))
+    (pin "2" (uuid "4adcccf2-fdec-594e-beb7-12fa84b3543a"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "C233")
+          (unit 1)))))
+  (symbol
+    (lib_id "Device:R")
+    (at 203.2 298.45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "e06a3604-fb3e-5c3d-87b8-4f30ffa38526")
+    (property "Reference" "R218" (at 207.756 297.18 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100k" (at 207.756 299.72 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "Resistor_SMD:R_0402_1005Metric"
+      (at 203.2 298.45 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 203.2 298.45 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Resistor"
+      (at 203.2 298.45 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "MPN"
+      "Yageo RC0402FR-07100KL (alt Panasonic ERJ / Vishay CRCW, 1%)"
+      (at 203.2 298.45 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d568993e-c620-5c59-b5d0-e3eba66279bb"))
+    (pin "2" (uuid "3c3adf7e-da9a-53cf-90ae-cb148f63c861"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "R218")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:PWR_FLAG")
+    (at 340.36 274.32 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "bdf80c76-cb3a-5b56-bcc6-8aee05fdd7ff")
+    (property "Reference" "#FLG0011" (at 340.36 274.32 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "PWR_FLAG" (at 340.36 270.51 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 340.36 274.32 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 340.36 274.32 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "Special symbol for telling ERC where power comes from"
+      (at 340.36 274.32 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "dee3f453-4a87-52dc-9075-31d883c1aae3"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#FLG0011")
+          (unit 1)))))
+  (symbol
+    (lib_id "Connector:TestPoint")
+    (at 347.98 274.32 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "ca21dfec-b94c-51b3-be57-95ccd5c56948")
+    (property "Reference" "TP203" (at 352.892 271.018 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "+3V7_S3" (at 354.112 273.558 0) (effects (font (size 1.27 1.27))))
+    (property
+      "Footprint"
+      "TestPoint:TestPoint_Pad_D1.0mm"
+      (at 347.98 274.32 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~" (at 347.98 274.32 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property
+      "Description"
+      "test point"
+      (at 347.98 274.32 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "923db3c2-e5d1-5483-9069-a59d9046c5f8"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "TP203")
+          (unit 1)))))
+  (text
+    "3x LM61460-Q1 (6A) - one per M.2 slot. Module VCC window: Sierra EM92XX 3.135-4.4V, peak 3.0A, ripple <100mVpp 1-100kHz (PTS 4.3.3);\n  Telit FN990 VPH_PWR 3.135-4.4V, peak 4A, ripple max 30mV (HDG Rev 3 Tab.15). Both: VCC must stay >=3.3V for EM9293 GNSS bias.\nVout = 1.0V x (1 + 100k/36.5k) = 3.74V (headroom for connector/trace drop). fsw 400kHz (RT 33.2k), L = 3.3uH XAL7070.\nEN driven by TCA6416A (control sheet); 100k pull-down keeps slot OFF at power-up. PGOOD -> expander + PG LED.\nSlot bulk (2x220uF low-ESR + 1uF/100nF/pF HF caps; FN990 HDG recommends >=100uF low-ESR at the card) is on each slot sheet.\nNOTE: no active output discharge - after EN low allow bleed-down before re-enable (power-cycle = sysfs remove -> EN off -> wait -> EN on -> rescan)."
+    (exclude_from_sim no)
+    (at 20.32 330 0)
+    (effects (font (size 1.27 1.27)) (justify left top))
+    (uuid "9d623e36-17f4-5559-8e04-f9e6128fca8b"))
+  (symbol
+    (lib_id "power:+3V3")
+    (at 63.5 25.4 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "a4737b91-6254-5c7b-826d-f46975cce06b")
+    (property "Reference" "#PWR00068" (at 63.5 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "+12V" (at 63.5 21.59 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 63.5 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 63.5 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 63.5 25.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d45a26af-2318-5370-a305-c429c7fb58e5"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00068")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+3V3")
+    (at 203.2 91.44 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "26b19805-0d90-576f-9027-d82f47b6e785")
+    (property "Reference" "#PWR00069" (at 203.2 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "+3V3" (at 203.2 87.63 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 203.2 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 203.2 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 203.2 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "bae4fd54-6654-50ac-a24b-da6ed61ee24d"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00069")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+3V3")
+    (at 203.2 193.04 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "cf516152-f1b1-5a58-be70-a96f5a0709ee")
+    (property "Reference" "#PWR00070" (at 203.2 193.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "+3V3" (at 203.2 189.23 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 203.2 193.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 203.2 193.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 203.2 193.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "8905f1ea-9aef-52ac-bbb2-fff31518b2fc"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00070")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+3V3")
+    (at 203.2 294.64 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "10254ba6-b6bb-5a12-b29f-f0f454f4f88e")
+    (property "Reference" "#PWR00071" (at 203.2 294.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "+3V3" (at 203.2 290.83 0) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 203.2 294.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 203.2 294.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 203.2 294.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "0b362a02-4871-57a6-8b4b-ed8342cb47da"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00071")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+3V3")
+    (at 363.22 71.12 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "2ddaa919-1989-5b34-993b-1c02ac1d605b")
+    (property "Reference" "#PWR00072" (at 363.22 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "+3V7_S1" (at 370.84 71.12 270) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 363.22 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 363.22 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 363.22 71.12 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "23658462-a4b8-5768-94bb-c5d422b2224d"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00072")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+3V3")
+    (at 363.22 172.72 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "87363128-5993-5997-97ea-25afedc7f5e4")
+    (property
+      "Reference"
+      "#PWR00073"
+      (at 363.22 172.72 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "+3V7_S2" (at 370.84 172.72 270) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 363.22 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 363.22 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 363.22 172.72 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "ab8d7c10-14c9-5372-9b85-30aa90415310"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00073")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:+3V3")
+    (at 363.22 274.32 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "ec910633-73a6-5009-9806-254cf2d5d309")
+    (property
+      "Reference"
+      "#PWR00074"
+      (at 363.22 274.32 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "+3V7_S3" (at 370.84 274.32 270) (effects (font (size 1.27 1.27))))
+    (property "Footprint" "" (at 363.22 274.32 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 363.22 274.32 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 363.22 274.32 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "2030f0f8-796c-5fe0-8569-e1467c94e735"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00074")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 165.1 111.76 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "118d25c9-e149-56a9-b686-da9ad37e040f")
+    (property "Reference" "#PWR00075" (at 165.1 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 165.1 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 165.1 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 165.1 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 165.1 111.76 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "f0707ff6-dd3c-51a0-93fd-20326b2fe18c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00075")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 121.92 76.2 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "3c7d147c-8ce0-5496-acf2-60881f5f0f7c")
+    (property "Reference" "#PWR00076" (at 121.92 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 121.92 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 121.92 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 121.92 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 121.92 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6e771a4d-c9ad-524c-8113-771166ef8ba5"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00076")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 139.7 76.2 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "b9ef24f6-74c0-533b-9053-91654689418d")
+    (property "Reference" "#PWR00077" (at 139.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 139.7 76.2 270) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 139.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 139.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 139.7 76.2 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "70d9a2d4-fda4-5603-b188-31c5827d0db9"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00077")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 121.92 50.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "753c994d-2f42-58d6-8088-0f2da36048c7")
+    (property "Reference" "#PWR00078" (at 121.92 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 121.92 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 121.92 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 121.92 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 121.92 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6314fd49-a810-5beb-80f4-078846e46a73"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00078")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 104.14 50.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "7bcef2a2-d845-57a1-a14c-bbce2ce10b75")
+    (property "Reference" "#PWR00079" (at 104.14 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 104.14 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 104.14 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 104.14 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 104.14 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "4b1052a8-f277-5a88-bec8-2f713fa73ac0"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00079")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 86.36 50.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "f0a38854-3d11-5597-9500-3299c55f24a2")
+    (property "Reference" "#PWR00080" (at 86.36 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 86.36 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 86.36 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 86.36 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 86.36 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "820794da-ef9c-55a7-b79f-1ca4dbfa216c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00080")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 68.58 50.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "57da81a5-826f-5f36-847b-852c5ee0f76a")
+    (property "Reference" "#PWR00081" (at 68.58 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 68.58 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 68.58 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 68.58 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 68.58 50.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "fa497d72-caec-5d36-b04c-af71c8602800"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00081")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 187.96 91.44 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "9646c7d5-b3f7-57fc-8133-75ba62b5a8d5")
+    (property "Reference" "#PWR00082" (at 187.96 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 187.96 91.44 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 187.96 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 187.96 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 187.96 91.44 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a5e12eb7-d067-5306-86f3-c602bc4ac4cd"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00082")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 251.46 78.74 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "83a08a1a-a5e0-58ad-bc1b-ebd21184cc90")
+    (property "Reference" "#PWR00083" (at 251.46 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 251.46 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 251.46 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 251.46 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 251.46 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "c2047245-0271-5a2a-8545-279028bd7af5"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00083")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 226.06 93.98 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "2f5ad5fb-f79c-542a-ae61-dad0d57b23f4")
+    (property "Reference" "#PWR00084" (at 226.06 93.98 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 226.06 93.98 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 226.06 93.98 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 226.06 93.98 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 226.06 93.98 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "2b69735e-17f6-524a-8ec6-488a5592e874"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00084")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 266.7 78.74 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "43780f53-94af-5b8c-ac8a-1c569ad21449")
+    (property "Reference" "#PWR00085" (at 266.7 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 266.7 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 266.7 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 266.7 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 266.7 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "ca6215d2-7516-5b91-9c14-d94e4abb62c0"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00085")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 284.48 78.74 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "86389376-82f9-5d58-b415-64164e7eef88")
+    (property "Reference" "#PWR00086" (at 284.48 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 284.48 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 284.48 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 284.48 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 284.48 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "899e6eb6-03d3-55eb-b183-c67750574e00"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00086")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 302.26 78.74 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "0e6c45fc-8e13-5331-9568-71b6f546efa6")
+    (property "Reference" "#PWR00087" (at 302.26 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 302.26 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 302.26 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 302.26 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 302.26 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "0b4c178a-94de-5af7-8725-13df22bf10be"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00087")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 320.04 78.74 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "f341a64c-01d4-5f11-b88f-add13c99dc99")
+    (property "Reference" "#PWR00088" (at 320.04 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 320.04 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 320.04 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 320.04 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 320.04 78.74 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a727e3d6-ac19-58ec-a872-71efeb046662"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00088")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 165.1 213.36 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "d75d721c-9e6b-57d2-b533-16eb4e587e0c")
+    (property "Reference" "#PWR00089" (at 165.1 213.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 165.1 213.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 165.1 213.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 165.1 213.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 165.1 213.36 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "bf1c7151-4dc9-5b86-903e-480655f04b20"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00089")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 121.92 177.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "29aa3cbf-4106-516b-91f6-aed2e4836a62")
+    (property "Reference" "#PWR00090" (at 121.92 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 121.92 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 121.92 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 121.92 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 121.92 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "d930d4da-5c85-5800-8539-d857a7a9eea4"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00090")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 139.7 177.8 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "c347add9-776b-5e11-9851-82ef38e5bf17")
+    (property "Reference" "#PWR00091" (at 139.7 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 139.7 177.8 270) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 139.7 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 139.7 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 139.7 177.8 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "3daa6268-5bfd-56f9-97be-577e3f29f2e2"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00091")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 121.92 152.4 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "a9013cba-9ffa-5153-bebf-4ce8a11048a5")
+    (property "Reference" "#PWR00092" (at 121.92 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 121.92 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 121.92 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 121.92 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 121.92 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "ac3769ee-8b48-5028-9440-57a0bb8e5384"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00092")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 104.14 152.4 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "fac2f3ad-8055-5308-82c1-3edc3c223dc0")
+    (property "Reference" "#PWR00093" (at 104.14 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 104.14 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 104.14 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 104.14 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 104.14 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "5986fa28-c711-593d-8115-d184be43ab81"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00093")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 86.36 152.4 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "d40da168-b0a4-51d1-93d8-6f130c0b3b9a")
+    (property "Reference" "#PWR00094" (at 86.36 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 86.36 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 86.36 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 86.36 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 86.36 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "0e459f37-f3c1-5594-b956-e09702c010fc"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00094")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 68.58 152.4 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "ad8bd5b9-2f5a-5415-807e-9abe70783a11")
+    (property "Reference" "#PWR00095" (at 68.58 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 68.58 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 68.58 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 68.58 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 68.58 152.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "f9887d41-95a6-5f75-b82b-bf2ba7ef24e8"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00095")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 187.96 193.04 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "7813dd7b-2043-5cbe-992c-f40ab36c094f")
+    (property
+      "Reference"
+      "#PWR00096"
+      (at 187.96 193.04 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 187.96 193.04 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 187.96 193.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 187.96 193.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 187.96 193.04 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "e766654d-8ed3-5c7a-9040-475e277c5d23"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00096")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 251.46 180.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "529bd56e-83cb-54d3-94ac-7b387c3cf605")
+    (property
+      "Reference"
+      "#PWR00097"
+      (at 251.46 180.34 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 251.46 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 251.46 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 251.46 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 251.46 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "818cda19-ce25-5bc5-9192-5f04071969d3"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00097")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 226.06 195.58 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "57d18cb6-b31d-5c80-a1c0-b0c4a5ef5698")
+    (property
+      "Reference"
+      "#PWR00098"
+      (at 226.06 195.58 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 226.06 195.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 226.06 195.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 226.06 195.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 226.06 195.58 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "10e87121-f03e-52a4-8950-2087cdf6df68"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00098")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 266.7 180.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "e9c94d21-e4e1-57f4-bdde-3cf60631d44a")
+    (property "Reference" "#PWR00099" (at 266.7 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 266.7 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 266.7 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 266.7 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 266.7 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "3749b02f-7669-5b8e-b5d1-a30b4a2c6e89"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00099")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 284.48 180.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "231f124d-3609-5bef-af64-f599cb5909a5")
+    (property
+      "Reference"
+      "#PWR00100"
+      (at 284.48 180.34 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 284.48 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 284.48 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 284.48 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 284.48 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6e27453e-98ab-534d-99d0-3258b02a473c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00100")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 302.26 180.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "ede3db95-55b4-55c5-b3eb-3ac035d35f84")
+    (property
+      "Reference"
+      "#PWR00101"
+      (at 302.26 180.34 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 302.26 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 302.26 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 302.26 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 302.26 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "b1ae39e1-a670-55a5-a3f9-11369e64501c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00101")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 320.04 180.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "c33fbe36-24ef-574d-a45e-638247c20f8e")
+    (property
+      "Reference"
+      "#PWR00102"
+      (at 320.04 180.34 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 320.04 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 320.04 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 320.04 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 320.04 180.34 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "c70d6139-1c29-5f7e-a1de-579707cdf9c5"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00102")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 165.1 314.96 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "e2b177b9-bf2c-56ad-b9ef-d0247b190581")
+    (property "Reference" "#PWR00103" (at 165.1 314.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 165.1 314.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 165.1 314.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 165.1 314.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 165.1 314.96 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "ac404402-87a7-57cb-b0c4-6461159206bd"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00103")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 121.92 279.4 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "d3aaf2ab-ef1b-53ce-914d-17db7693be76")
+    (property "Reference" "#PWR00104" (at 121.92 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 121.92 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 121.92 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 121.92 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 121.92 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "1bb5268a-9249-5bbb-b103-7b5a79a150b9"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00104")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 139.7 279.4 270)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "e468f82e-5d0e-5c06-a20d-3acfbccd6324")
+    (property "Reference" "#PWR00105" (at 139.7 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 139.7 279.4 270) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 139.7 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 139.7 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 139.7 279.4 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "3b613ab5-64da-5db6-b615-faf11ab3c68e"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00105")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 121.92 254 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "001c5602-caca-582e-8e79-f895f4fffeae")
+    (property "Reference" "#PWR00106" (at 121.92 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 121.92 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 121.92 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 121.92 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 121.92 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "e75c7d22-5df7-56d7-86f6-ee723a42512c"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00106")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 104.14 254 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "7e1dafdb-9f00-5607-a756-6704f258ba41")
+    (property "Reference" "#PWR00107" (at 104.14 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 104.14 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 104.14 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 104.14 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 104.14 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "ab197e23-1d2d-5e49-b222-8c7e17519faa"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00107")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 86.36 254 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "0eb80e5c-9b4a-5b7b-8bad-e98b130313da")
+    (property "Reference" "#PWR00108" (at 86.36 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 86.36 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 86.36 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 86.36 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 86.36 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "7eed58bd-2ad0-5a68-ad00-9d46ab1d6b0a"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00108")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 68.58 254 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "21baf033-f88b-5c6b-ac45-a57cc50fdc1f")
+    (property "Reference" "#PWR00109" (at 68.58 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 68.58 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 68.58 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 68.58 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 68.58 254 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "6566cc2e-aa1c-5358-8c32-ec98ccc455c2"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00109")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 187.96 294.64 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "c136f4a1-df6f-5bae-bd4a-87182deb9175")
+    (property
+      "Reference"
+      "#PWR00110"
+      (at 187.96 294.64 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 187.96 294.64 90) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 187.96 294.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 187.96 294.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 187.96 294.64 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "a76be7e1-3cb9-53a9-9c52-2224ee57f522"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00110")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 251.46 281.94 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "1641a5e7-bcd9-5c21-891a-04379edf1402")
+    (property
+      "Reference"
+      "#PWR00111"
+      (at 251.46 281.94 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 251.46 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 251.46 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 251.46 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 251.46 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "4e519ede-f3e6-5045-869e-4251e8869bc7"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00111")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 226.06 297.18 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "42a42f16-8a4b-51d3-9a47-c9a83205d818")
+    (property
+      "Reference"
+      "#PWR00112"
+      (at 226.06 297.18 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 226.06 297.18 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 226.06 297.18 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 226.06 297.18 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 226.06 297.18 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "1fd0bee6-b47e-59f4-80b8-9c6d883486b2"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00112")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 266.7 281.94 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "858c409f-2f28-5633-aad9-f995cee23a38")
+    (property "Reference" "#PWR00113" (at 266.7 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 266.7 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 266.7 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 266.7 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 266.7 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "8f55d679-34f8-5d6f-8bf1-788479978073"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00113")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 284.48 281.94 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "ccf62917-264c-505b-b653-b922691f2291")
+    (property
+      "Reference"
+      "#PWR00114"
+      (at 284.48 281.94 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 284.48 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 284.48 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 284.48 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 284.48 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "87ac2f18-440d-5d60-9fc8-4de87619cdd8"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00114")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 302.26 281.94 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "1f798f4b-34c9-511f-b6f3-4ed261b44ec5")
+    (property
+      "Reference"
+      "#PWR00115"
+      (at 302.26 281.94 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 302.26 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 302.26 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 302.26 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 302.26 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "053e7eeb-ca0b-5aa2-a2c0-a4089a75838d"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00115")
+          (unit 1)))))
+  (symbol
+    (lib_id "power:GND")
+    (at 320.04 281.94 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "96487e84-d5d8-54e2-88f1-420258361d26")
+    (property
+      "Reference"
+      "#PWR00116"
+      (at 320.04 281.94 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Value" "GND" (at 320.04 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Footprint" "" (at 320.04 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "" (at 320.04 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Description" "" (at 320.04 281.94 0) (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid "c00c99f8-954f-5b0a-8ae7-1ae8b58a56ad"))
+    (instances
+      (project
+        "wwan-carrier"
+        (path
+          "/73ea9acc-a02c-5a9b-bf57-39b76cf28df1/da3fe8d1-29bf-5922-82e7-99c6d29986af"
+          (reference "#PWR00116")
+          (unit 1)))))
+  (hierarchical_label
+    "SLOT1_PG"
+    (shape bidirectional)
+    (at 223.52 99.06 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "bdaa259b-67ef-5af7-a8eb-8cef8eab6dd4"))
+  (hierarchical_label
+    "SLOT1_PWR_EN"
+    (shape bidirectional)
+    (at 50.8 68.58 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid "7870bba6-dcca-5598-a235-383061451336"))
+  (hierarchical_label
+    "SLOT2_PG"
+    (shape bidirectional)
+    (at 223.52 200.66 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "286e2a1a-386f-51e3-95e1-ff93fc3b8227"))
+  (hierarchical_label
+    "SLOT2_PWR_EN"
+    (shape bidirectional)
+    (at 50.8 170.18 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid "5d718308-e768-5214-b9e9-befe6c2692f1"))
+  (hierarchical_label
+    "SLOT3_PG"
+    (shape bidirectional)
+    (at 223.52 302.26 0)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid "f9945018-6b36-5fb3-af3f-6b76812f85ce"))
+  (hierarchical_label
+    "SLOT3_PWR_EN"
+    (shape bidirectional)
+    (at 50.8 271.78 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid "9d619d14-a6eb-5ce2-858d-cd81ebe2c083"))
+  (wire
+    (pts (xy 63.5 43.18) (xy 68.58 43.18))
+    (stroke (width 0) (type default))
+    (uuid "63210bfd-c825-58e9-a6fd-12795b6a8bd2"))
+  (wire
+    (pts (xy 63.5 144.78) (xy 68.58 144.78))
+    (stroke (width 0) (type default))
+    (uuid "408def7d-3c63-5904-bec3-8c70c3df56b8"))
+  (wire
+    (pts (xy 63.5 246.38) (xy 68.58 246.38))
+    (stroke (width 0) (type default))
+    (uuid "4eef2e01-2600-5323-b770-4af38edd4984"))
+  (wire
+    (pts (xy 68.58 43.18) (xy 86.36 43.18))
+    (stroke (width 0) (type default))
+    (uuid "31df26a7-925c-543b-91dd-e457c512f47d"))
+  (wire
+    (pts (xy 68.58 144.78) (xy 86.36 144.78))
+    (stroke (width 0) (type default))
+    (uuid "f7329d46-a9c5-56f3-96f8-087eec11fdb2"))
+  (wire
+    (pts (xy 68.58 246.38) (xy 86.36 246.38))
+    (stroke (width 0) (type default))
+    (uuid "5834b589-18fe-5436-b4ce-678e2d4b8c88"))
+  (wire
+    (pts (xy 86.36 43.18) (xy 104.14 43.18))
+    (stroke (width 0) (type default))
+    (uuid "e8f44e43-f554-5945-b8e5-2e0f55e0e7be"))
+  (wire
+    (pts (xy 86.36 144.78) (xy 104.14 144.78))
+    (stroke (width 0) (type default))
+    (uuid "e8121628-2414-5704-bcee-e70b8f8bf1be"))
+  (wire
+    (pts (xy 86.36 246.38) (xy 104.14 246.38))
+    (stroke (width 0) (type default))
+    (uuid "320296c8-e04b-55e5-a87b-15b67515f2b8"))
+  (wire
+    (pts (xy 104.14 43.18) (xy 121.92 43.18))
+    (stroke (width 0) (type default))
+    (uuid "aab1ede6-84b9-5e54-9bee-80fddccf3a9d"))
+  (wire
+    (pts (xy 104.14 144.78) (xy 121.92 144.78))
+    (stroke (width 0) (type default))
+    (uuid "4191a77d-eccd-5da5-a525-c68f102e435f"))
+  (wire
+    (pts (xy 104.14 246.38) (xy 121.92 246.38))
+    (stroke (width 0) (type default))
+    (uuid "69c90137-4057-5da4-95c5-86ef837c49c2"))
+  (wire
+    (pts (xy 121.92 43.18) (xy 149.86 43.18))
+    (stroke (width 0) (type default))
+    (uuid "271121aa-ba19-5270-83a1-bc67e564d094"))
+  (wire
+    (pts (xy 121.92 144.78) (xy 149.86 144.78))
+    (stroke (width 0) (type default))
+    (uuid "65cb176e-c0f7-5d31-8fb5-9a2689f6c266"))
+  (wire
+    (pts (xy 121.92 246.38) (xy 149.86 246.38))
+    (stroke (width 0) (type default))
+    (uuid "0ba088de-2b1c-5bcd-9bcb-076d8ecb0a8d"))
+  (wire
+    (pts (xy 149.86 60.96) (xy 152.4 60.96))
+    (stroke (width 0) (type default))
+    (uuid "5a452364-04e9-57ee-a2dc-cf12f81ceae4"))
+  (wire
+    (pts (xy 149.86 162.56) (xy 152.4 162.56))
+    (stroke (width 0) (type default))
+    (uuid "4f1c3ab2-4ae7-50f4-9463-573db34ad4e9"))
+  (wire
+    (pts (xy 149.86 264.16) (xy 152.4 264.16))
+    (stroke (width 0) (type default))
+    (uuid "c92be467-c492-5d9e-b0bd-206dd5948b91"))
+  (wire
+    (pts (xy 63.5 25.4) (xy 63.5 43.18))
+    (stroke (width 0) (type default))
+    (uuid "c5ada618-a64f-5298-9811-6e0330fc0a00"))
+  (wire
+    (pts (xy 63.5 43.18) (xy 63.5 144.78))
+    (stroke (width 0) (type default))
+    (uuid "dfb2ce28-9157-5c4d-8860-d5f1f854f5da"))
+  (wire
+    (pts (xy 63.5 144.78) (xy 63.5 246.38))
+    (stroke (width 0) (type default))
+    (uuid "b5bcbbf7-5dd4-5db9-ac64-562a9b37c591"))
+  (wire
+    (pts (xy 149.86 43.18) (xy 149.86 60.96))
+    (stroke (width 0) (type default))
+    (uuid "0930b44d-f9ca-5aed-bd0e-4bd9ab64ab3f"))
+  (wire
+    (pts (xy 149.86 144.78) (xy 149.86 162.56))
+    (stroke (width 0) (type default))
+    (uuid "0a10b2dc-46cc-534b-8e6e-89d08c11028a"))
+  (wire
+    (pts (xy 149.86 246.38) (xy 149.86 264.16))
+    (stroke (width 0) (type default))
+    (uuid "8112cc3f-48fa-54fe-ba48-2c3090cd8f7e"))
+  (wire
+    (pts (xy 177.8 76.2) (xy 218.44 76.2))
+    (stroke (width 0) (type default))
+    (uuid "226e556f-bfc0-5fac-ae51-3eb8d2ace418"))
+  (wire
+    (pts (xy 218.44 71.12) (xy 226.06 71.12))
+    (stroke (width 0) (type default))
+    (uuid "9f505ed5-e335-5772-90de-03ecbcba58d2"))
+  (wire
+    (pts (xy 226.06 71.12) (xy 251.46 71.12))
+    (stroke (width 0) (type default))
+    (uuid "98936e79-c388-58c3-8c0a-4455648330a7"))
+  (wire
+    (pts (xy 251.46 71.12) (xy 266.7 71.12))
+    (stroke (width 0) (type default))
+    (uuid "021a69e4-78bf-59e3-a4c0-3b8e22e234a3"))
+  (wire
+    (pts (xy 266.7 71.12) (xy 284.48 71.12))
+    (stroke (width 0) (type default))
+    (uuid "2a9c85f6-7b8c-595c-b9c3-1ffdf7616bca"))
+  (wire
+    (pts (xy 284.48 71.12) (xy 302.26 71.12))
+    (stroke (width 0) (type default))
+    (uuid "c398919d-cc2c-5688-8000-0a1a2426020c"))
+  (wire
+    (pts (xy 302.26 71.12) (xy 320.04 71.12))
+    (stroke (width 0) (type default))
+    (uuid "d23ce671-5f7b-5e9e-b9f7-cda5eac78bd4"))
+  (wire
+    (pts (xy 320.04 71.12) (xy 340.36 71.12))
+    (stroke (width 0) (type default))
+    (uuid "384cb0f3-7b22-5612-9ee0-c621840370d3"))
+  (wire
+    (pts (xy 340.36 71.12) (xy 347.98 71.12))
+    (stroke (width 0) (type default))
+    (uuid "65f712e0-6e41-57e8-a9f7-fc2ca0e2aec4"))
+  (wire
+    (pts (xy 347.98 71.12) (xy 363.22 71.12))
+    (stroke (width 0) (type default))
+    (uuid "14f5b446-72a7-5ea6-9216-0922a1255f46"))
+  (wire
+    (pts (xy 218.44 71.12) (xy 218.44 76.2))
+    (stroke (width 0) (type default))
+    (uuid "6afece43-8fc1-56c7-9ba6-5d229d47fcc3"))
+  (wire
+    (pts (xy 226.06 71.12) (xy 226.06 73.66))
+    (stroke (width 0) (type default))
+    (uuid "a6dab97b-0d9a-536d-a42f-a95880f2caa7"))
+  (wire
+    (pts (xy 177.8 177.8) (xy 218.44 177.8))
+    (stroke (width 0) (type default))
+    (uuid "40c44cd3-144e-55e5-8b9b-d9d62f62d827"))
+  (wire
+    (pts (xy 218.44 172.72) (xy 226.06 172.72))
+    (stroke (width 0) (type default))
+    (uuid "bfb796f6-ecbf-57d4-a51c-96a375818e62"))
+  (wire
+    (pts (xy 226.06 172.72) (xy 251.46 172.72))
+    (stroke (width 0) (type default))
+    (uuid "4199bba5-3f30-5737-899f-2580f28d9c66"))
+  (wire
+    (pts (xy 251.46 172.72) (xy 266.7 172.72))
+    (stroke (width 0) (type default))
+    (uuid "9162012a-b49f-5abb-a1ec-5d96c428ff62"))
+  (wire
+    (pts (xy 266.7 172.72) (xy 284.48 172.72))
+    (stroke (width 0) (type default))
+    (uuid "ff73f833-1fa7-54f7-8dc5-c12d307d74e4"))
+  (wire
+    (pts (xy 284.48 172.72) (xy 302.26 172.72))
+    (stroke (width 0) (type default))
+    (uuid "7d3c4dea-1481-5539-88ca-ee690dc6ad23"))
+  (wire
+    (pts (xy 302.26 172.72) (xy 320.04 172.72))
+    (stroke (width 0) (type default))
+    (uuid "0c410036-cf3b-511d-8462-cafdf8880408"))
+  (wire
+    (pts (xy 320.04 172.72) (xy 340.36 172.72))
+    (stroke (width 0) (type default))
+    (uuid "b21ebf23-adb5-561f-ac4b-9092e3dd8303"))
+  (wire
+    (pts (xy 340.36 172.72) (xy 347.98 172.72))
+    (stroke (width 0) (type default))
+    (uuid "249a4603-6c3e-5f6e-a21b-83b18f4df0ab"))
+  (wire
+    (pts (xy 347.98 172.72) (xy 363.22 172.72))
+    (stroke (width 0) (type default))
+    (uuid "081bb243-8176-55eb-8e37-a662576181d1"))
+  (wire
+    (pts (xy 218.44 172.72) (xy 218.44 177.8))
+    (stroke (width 0) (type default))
+    (uuid "7a9b52eb-ab25-5f5d-b23b-15a00f0edcb7"))
+  (wire
+    (pts (xy 226.06 172.72) (xy 226.06 175.26))
+    (stroke (width 0) (type default))
+    (uuid "bf8b8769-0f5f-5ca3-9a34-fad55c910cae"))
+  (wire
+    (pts (xy 50.8 68.58) (xy 121.92 68.58))
+    (stroke (width 0) (type default))
+    (uuid "f6a2115a-c0d0-515d-b177-7ac7cf0bf4b4"))
+  (wire
+    (pts (xy 121.92 68.58) (xy 152.4 68.58))
+    (stroke (width 0) (type default))
+    (uuid "ba48ba1c-0da4-521b-ad1b-a8f549682954"))
+  (wire
+    (pts (xy 177.8 279.4) (xy 218.44 279.4))
+    (stroke (width 0) (type default))
+    (uuid "792c277c-e361-5359-812e-afe6112718a2"))
+  (wire
+    (pts (xy 218.44 274.32) (xy 226.06 274.32))
+    (stroke (width 0) (type default))
+    (uuid "00dac0f4-c563-50a1-a879-8b7ebc25afa9"))
+  (wire
+    (pts (xy 226.06 274.32) (xy 251.46 274.32))
+    (stroke (width 0) (type default))
+    (uuid "df689c7b-bf77-5037-a9c1-32ea71877330"))
+  (wire
+    (pts (xy 251.46 274.32) (xy 266.7 274.32))
+    (stroke (width 0) (type default))
+    (uuid "9a2a321e-718f-55ec-a8d8-b4a8c22eb8f3"))
+  (wire
+    (pts (xy 266.7 274.32) (xy 284.48 274.32))
+    (stroke (width 0) (type default))
+    (uuid "d2c9c48e-7e89-5e68-aad2-a62b24e56563"))
+  (wire
+    (pts (xy 284.48 274.32) (xy 302.26 274.32))
+    (stroke (width 0) (type default))
+    (uuid "36b889f3-dd35-5af0-9ead-3e1beb80d3ce"))
+  (wire
+    (pts (xy 302.26 274.32) (xy 320.04 274.32))
+    (stroke (width 0) (type default))
+    (uuid "3622d3b1-d4e4-5071-a17a-80774c48981c"))
+  (wire
+    (pts (xy 320.04 274.32) (xy 340.36 274.32))
+    (stroke (width 0) (type default))
+    (uuid "fae4c439-4e3d-5da5-8214-d58f77cec632"))
+  (wire
+    (pts (xy 340.36 274.32) (xy 347.98 274.32))
+    (stroke (width 0) (type default))
+    (uuid "31b62f6b-fdab-50b6-84d9-210d91c6e1fa"))
+  (wire
+    (pts (xy 347.98 274.32) (xy 363.22 274.32))
+    (stroke (width 0) (type default))
+    (uuid "ee081942-4fd4-563a-afcf-f4ffaa63dee5"))
+  (wire
+    (pts (xy 218.44 274.32) (xy 218.44 279.4))
+    (stroke (width 0) (type default))
+    (uuid "ff21d3c0-d480-5017-8003-c63e32501db2"))
+  (wire
+    (pts (xy 226.06 274.32) (xy 226.06 276.86))
+    (stroke (width 0) (type default))
+    (uuid "752a167d-48e9-54f5-b143-c2ef45d89447"))
+  (wire
+    (pts (xy 50.8 170.18) (xy 121.92 170.18))
+    (stroke (width 0) (type default))
+    (uuid "af52e4f5-0fbc-5fbf-b440-df2af332c8da"))
+  (wire
+    (pts (xy 121.92 170.18) (xy 152.4 170.18))
+    (stroke (width 0) (type default))
+    (uuid "3cf02da1-06c7-54af-b7c1-89d543a02d8a"))
+  (wire
+    (pts (xy 177.8 91.44) (xy 180.34 91.44))
+    (stroke (width 0) (type default))
+    (uuid "3fa77e43-490d-5f1e-b933-eefb6b5e4fd8"))
+  (wire
+    (pts (xy 177.8 193.04) (xy 180.34 193.04))
+    (stroke (width 0) (type default))
+    (uuid "74368d7b-2f1c-5482-b62c-9b49f70fb283"))
+  (wire
+    (pts (xy 177.8 294.64) (xy 180.34 294.64))
+    (stroke (width 0) (type default))
+    (uuid "bab462cd-32a4-535c-b648-88d62f376222"))
+  (wire
+    (pts (xy 147.32 76.2) (xy 152.4 76.2))
+    (stroke (width 0) (type default))
+    (uuid "b0799f43-9dd1-557c-8c07-0f905db14c90"))
+  (wire
+    (pts (xy 147.32 177.8) (xy 152.4 177.8))
+    (stroke (width 0) (type default))
+    (uuid "067e9a85-c82e-5b76-80b8-8c19ba75eac6"))
+  (wire
+    (pts (xy 147.32 279.4) (xy 152.4 279.4))
+    (stroke (width 0) (type default))
+    (uuid "a7ac4670-d435-5c7d-a37f-a59cbc8ca59e"))
+  (wire
+    (pts (xy 177.8 60.96) (xy 179.07 60.96))
+    (stroke (width 0) (type default))
+    (uuid "c3f9219f-7ac1-5915-81ee-123131d25331"))
+  (wire
+    (pts (xy 179.07 50.8) (xy 182.88 50.8))
+    (stroke (width 0) (type default))
+    (uuid "6b7bd044-d169-593d-8cfe-d24c4ba1eb7e"))
+  (wire
+    (pts (xy 179.07 50.8) (xy 179.07 60.96))
+    (stroke (width 0) (type default))
+    (uuid "5a3b9db5-a71b-5012-9417-0b1b31ab40eb"))
+  (wire
+    (pts (xy 177.8 162.56) (xy 179.07 162.56))
+    (stroke (width 0) (type default))
+    (uuid "90dcf6f3-745a-5a6a-8791-76f871543714"))
+  (wire
+    (pts (xy 179.07 152.4) (xy 182.88 152.4))
+    (stroke (width 0) (type default))
+    (uuid "bb1e1fc9-3fd9-5316-8649-8c119391a1df"))
+  (wire
+    (pts (xy 179.07 152.4) (xy 179.07 162.56))
+    (stroke (width 0) (type default))
+    (uuid "6b06b338-6c07-57d3-a8d0-a848bd655e5e"))
+  (wire
+    (pts (xy 177.8 264.16) (xy 179.07 264.16))
+    (stroke (width 0) (type default))
+    (uuid "ec60b75e-8764-5100-8fd2-434ca0c88da6"))
+  (wire
+    (pts (xy 179.07 254) (xy 182.88 254))
+    (stroke (width 0) (type default))
+    (uuid "d69aff19-bfc6-5967-a044-a8474b14a3ca"))
+  (wire
+    (pts (xy 179.07 254) (xy 179.07 264.16))
+    (stroke (width 0) (type default))
+    (uuid "a9e95575-341f-527b-8575-4f7f58bcdf7a"))
+  (wire
+    (pts (xy 177.8 66.04) (xy 191.77 66.04))
+    (stroke (width 0) (type default))
+    (uuid "09eb0de9-6636-52ff-abff-d94ac416db11"))
+  (wire
+    (pts (xy 190.5 50.8) (xy 191.77 50.8))
+    (stroke (width 0) (type default))
+    (uuid "c32aceef-f9e1-51cc-a1fa-3a07ae34f318"))
+  (wire
+    (pts (xy 191.77 50.8) (xy 195.58 50.8))
+    (stroke (width 0) (type default))
+    (uuid "8ef6a76c-43d8-54c4-9e7d-ca22b80df638"))
+  (wire
+    (pts (xy 191.77 50.8) (xy 191.77 66.04))
+    (stroke (width 0) (type default))
+    (uuid "ca46746e-a765-5dcd-8f61-2252b7ad4f66"))
+  (wire
+    (pts (xy 177.8 167.64) (xy 191.77 167.64))
+    (stroke (width 0) (type default))
+    (uuid "90666f9d-423d-5c50-83d7-b3d1ac1ad416"))
+  (wire
+    (pts (xy 190.5 152.4) (xy 191.77 152.4))
+    (stroke (width 0) (type default))
+    (uuid "50a8bd12-8f58-5d2e-80c0-14a6c9de977c"))
+  (wire
+    (pts (xy 191.77 152.4) (xy 195.58 152.4))
+    (stroke (width 0) (type default))
+    (uuid "d0c75d2b-f25c-5e48-b361-4112ce065e96"))
+  (wire
+    (pts (xy 191.77 152.4) (xy 191.77 167.64))
+    (stroke (width 0) (type default))
+    (uuid "96c2b3e9-3387-5fd7-8139-023b78081fae"))
+  (wire
+    (pts (xy 177.8 269.24) (xy 191.77 269.24))
+    (stroke (width 0) (type default))
+    (uuid "65a3c7aa-5979-5b24-891e-62422eeb1e4e"))
+  (wire
+    (pts (xy 190.5 254) (xy 191.77 254))
+    (stroke (width 0) (type default))
+    (uuid "5a2bddc1-97bf-53ff-810b-ee5f3d1ea39f"))
+  (wire
+    (pts (xy 191.77 254) (xy 195.58 254))
+    (stroke (width 0) (type default))
+    (uuid "0f226e0c-f879-5047-99cf-604d1469e6f2"))
+  (wire
+    (pts (xy 191.77 254) (xy 191.77 269.24))
+    (stroke (width 0) (type default))
+    (uuid "42ab2ac0-86df-5e0b-b2af-c3298bf7d7eb"))
+  (wire
+    (pts (xy 177.8 99.06) (xy 203.2 99.06))
+    (stroke (width 0) (type default))
+    (uuid "432dd2ee-e14a-5404-a901-41646310f4cb"))
+  (wire
+    (pts (xy 203.2 99.06) (xy 223.52 99.06))
+    (stroke (width 0) (type default))
+    (uuid "9162df18-d50c-56a5-8b6d-6b21f44c49fe"))
+  (wire
+    (pts (xy 177.8 200.66) (xy 203.2 200.66))
+    (stroke (width 0) (type default))
+    (uuid "a2ea8f02-93ae-5d64-aeb7-e56fb0f0e50e"))
+  (wire
+    (pts (xy 203.2 200.66) (xy 223.52 200.66))
+    (stroke (width 0) (type default))
+    (uuid "96db8511-8a35-5c0a-9929-a464b117b401"))
+  (wire
+    (pts (xy 177.8 302.26) (xy 203.2 302.26))
+    (stroke (width 0) (type default))
+    (uuid "ed96966f-8055-5113-9c45-5bedfd1b43c4"))
+  (wire
+    (pts (xy 203.2 302.26) (xy 223.52 302.26))
+    (stroke (width 0) (type default))
+    (uuid "3575c8c5-d32b-5eb8-96ea-9e3df944f7bb"))
+  (wire
+    (pts (xy 177.8 83.82) (xy 226.06 83.82))
+    (stroke (width 0) (type default))
+    (uuid "2a788132-6f1c-59d0-917e-d3fdfe98a4a3"))
+  (wire
+    (pts (xy 226.06 81.28) (xy 226.06 83.82))
+    (stroke (width 0) (type default))
+    (uuid "f94c6c46-1e1f-5b9a-97ab-d20f1adc2b20"))
+  (wire
+    (pts (xy 226.06 83.82) (xy 226.06 86.36))
+    (stroke (width 0) (type default))
+    (uuid "7064380c-edcd-5900-8d36-04b44f2b71fe"))
+  (wire
+    (pts (xy 177.8 185.42) (xy 226.06 185.42))
+    (stroke (width 0) (type default))
+    (uuid "6f9679ef-6c81-52a1-b02e-e7973dc532c6"))
+  (wire
+    (pts (xy 226.06 182.88) (xy 226.06 185.42))
+    (stroke (width 0) (type default))
+    (uuid "04718149-618a-5e17-991b-af57d23372c4"))
+  (wire
+    (pts (xy 226.06 185.42) (xy 226.06 187.96))
+    (stroke (width 0) (type default))
+    (uuid "735e35dc-950a-5860-931d-40b6e136e282"))
+  (wire
+    (pts (xy 177.8 287.02) (xy 226.06 287.02))
+    (stroke (width 0) (type default))
+    (uuid "cfe4713c-3d27-58b6-ac6b-51da085a1afc"))
+  (wire
+    (pts (xy 226.06 284.48) (xy 226.06 287.02))
+    (stroke (width 0) (type default))
+    (uuid "10c6ad92-db5e-5ecf-b3d2-1e5c3405a7a3"))
+  (wire
+    (pts (xy 226.06 287.02) (xy 226.06 289.56))
+    (stroke (width 0) (type default))
+    (uuid "19c40482-ca33-52c5-9fd3-68488f28f8a0"))
+  (wire
+    (pts (xy 177.8 71.12) (xy 204.47 71.12))
+    (stroke (width 0) (type default))
+    (uuid "73dec6bd-df55-5bc3-be38-0d6d5b9b8340"))
+  (wire
+    (pts (xy 203.2 50.8) (xy 204.47 50.8))
+    (stroke (width 0) (type default))
+    (uuid "9cbd780f-0e92-5b5f-a336-b6903ae1e8de"))
+  (wire
+    (pts (xy 204.47 71.12) (xy 210.82 71.12))
+    (stroke (width 0) (type default))
+    (uuid "10cfa359-c3b2-580a-b833-75d58bc877fe"))
+  (wire
+    (pts (xy 204.47 50.8) (xy 204.47 71.12))
+    (stroke (width 0) (type default))
+    (uuid "79768be2-c679-510a-86d9-25b185f317b8"))
+  (wire
+    (pts (xy 177.8 172.72) (xy 204.47 172.72))
+    (stroke (width 0) (type default))
+    (uuid "ed4320b0-ef54-5ff7-bf9a-03f995738558"))
+  (wire
+    (pts (xy 203.2 152.4) (xy 204.47 152.4))
+    (stroke (width 0) (type default))
+    (uuid "060bae41-d090-5a2e-b0ee-d3161433b401"))
+  (wire
+    (pts (xy 204.47 172.72) (xy 210.82 172.72))
+    (stroke (width 0) (type default))
+    (uuid "e7b4c04b-3995-5d38-beeb-9078b4898359"))
+  (wire
+    (pts (xy 204.47 152.4) (xy 204.47 172.72))
+    (stroke (width 0) (type default))
+    (uuid "ad415780-715f-5ea3-8fe6-b00189f5f886"))
+  (wire
+    (pts (xy 177.8 274.32) (xy 204.47 274.32))
+    (stroke (width 0) (type default))
+    (uuid "7289f980-2acb-5dcb-a050-406558f9538d"))
+  (wire
+    (pts (xy 203.2 254) (xy 204.47 254))
+    (stroke (width 0) (type default))
+    (uuid "203e98c8-0bff-57b9-8f19-beaa321c1e25"))
+  (wire
+    (pts (xy 204.47 274.32) (xy 210.82 274.32))
+    (stroke (width 0) (type default))
+    (uuid "29ea3d2f-46ee-59d1-a539-ee8ee792d9fd"))
+  (wire
+    (pts (xy 204.47 254) (xy 204.47 274.32))
+    (stroke (width 0) (type default))
+    (uuid "fd74a1e5-454f-501f-a4c3-c75e8a7113c2"))
+  (wire
+    (pts (xy 50.8 271.78) (xy 121.92 271.78))
+    (stroke (width 0) (type default))
+    (uuid "70185097-b3f6-5c26-801d-daaffffa56b7"))
+  (wire
+    (pts (xy 121.92 271.78) (xy 152.4 271.78))
+    (stroke (width 0) (type default))
+    (uuid "e05498d2-969c-5045-b8cf-737aa1005c3b"))
+  (junction
+    (at 302.26 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "9ecff927-79b7-5c05-9e48-5672fc9196ea"))
+  (junction
+    (at 266.7 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "8c584703-bab4-5c0e-bf16-25a663fb7c82"))
+  (junction
+    (at 68.58 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "a28ffff2-228b-5149-b8db-54dc37cad7b2"))
+  (junction
+    (at 226.06 287.02)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "3b40fb16-b3de-51ad-ade5-e52deb207b2d"))
+  (junction
+    (at 204.47 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "cf927d06-bc84-5831-973e-c7801bd1d60c"))
+  (junction
+    (at 226.06 185.42)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "317bb959-ec52-5065-85d2-c5be02c92251"))
+  (junction
+    (at 121.92 271.78)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "b85f712c-252d-58ea-9420-974c828dab49"))
+  (junction
+    (at 121.92 68.58)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "9eab7b94-372a-5755-b1c9-74ae8564a910"))
+  (junction
+    (at 63.5 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "1ba757b6-7565-5fec-9c36-0144ec754524"))
+  (junction
+    (at 340.36 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "5e7064c8-16cb-50ab-9405-11b586f04bd9"))
+  (junction
+    (at 340.36 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "2a5b1cda-f400-546c-9550-d77682edf87a"))
+  (junction
+    (at 251.46 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "6fcee802-23f8-56e5-8bf3-cb38d5a0a50a"))
+  (junction
+    (at 203.2 99.06)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "306295ea-1d9c-54d9-84f4-61597c96f625"))
+  (junction
+    (at 340.36 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "7f394c97-3916-5e3a-abab-f5ac9f937b92"))
+  (junction
+    (at 226.06 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "6d73f0e9-8d78-5ee6-a131-e706fb245394"))
+  (junction
+    (at 302.26 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e026ef9f-c2d1-5f5f-af05-f47422136820"))
+  (junction
+    (at 121.92 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "273e1ca4-cb64-54d0-8494-9d63ca3066f6"))
+  (junction
+    (at 218.44 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "1884cff0-5198-5d9d-9832-328f0bccd7e2"))
+  (junction
+    (at 266.7 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "dad0f71e-b110-554a-89a9-36e5e7cc7d42"))
+  (junction
+    (at 86.36 144.78)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e6b3139e-0b0e-5b79-a57b-a400cf904ade"))
+  (junction
+    (at 104.14 246.38)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "d4333bb1-5d4f-5e31-9f2c-de9e88f3dd25"))
+  (junction
+    (at 320.04 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "f373f38d-acc2-5524-aac3-359625e698d0"))
+  (junction
+    (at 251.46 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "7c3f425a-5256-52c4-af3f-c9054c8ce4b8"))
+  (junction
+    (at 203.2 200.66)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "9a72bdef-fa0a-5a14-9542-2462f7a175e5"))
+  (junction
+    (at 104.14 144.78)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "3b55d0bd-1206-53ea-841b-7fc3a8749b6d"))
+  (junction
+    (at 302.26 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "2b92f4dd-7322-5dac-a667-787f593beea4"))
+  (junction
+    (at 284.48 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "de43896b-5ead-5195-8193-93fb43b05afd"))
+  (junction
+    (at 226.06 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "09c8b109-fd6c-55cb-ac5e-a7016541d619"))
+  (junction
+    (at 204.47 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "aec90435-44a9-5df2-8880-577633ebb014"))
+  (junction
+    (at 104.14 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "912a21e1-e6eb-5fd8-9f0d-dc235ccc4d6e"))
+  (junction
+    (at 63.5 144.78)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "651ffffe-0c7f-5d96-aec6-6a68cbab6bdc"))
+  (junction
+    (at 320.04 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "fb5fed30-c9b2-5fb5-b0d9-ae1718110164"))
+  (junction
+    (at 226.06 83.82)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "f94e9864-d59c-5ca3-ae37-acd779614327"))
+  (junction
+    (at 204.47 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "1d3b1e5c-5157-59c8-8c5b-9f53faba9ebb"))
+  (junction
+    (at 347.98 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "564644ad-9198-5248-b3da-89fc7e7ee1bc"))
+  (junction
+    (at 218.44 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "23fa82ed-530d-57a3-b6fe-f5f749ef16de"))
+  (junction
+    (at 86.36 43.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "3a6b0e3a-b26b-54ba-af18-4abd65fad437"))
+  (junction
+    (at 86.36 246.38)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "3a9f32cb-c303-55e0-802b-e797ce37f6cc"))
+  (junction
+    (at 284.48 71.12)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "37de12c4-43da-5246-b71f-b2fd8be6c4f3"))
+  (junction
+    (at 218.44 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e62da515-a97d-529f-af11-41b5b98a3f55"))
+  (junction
+    (at 226.06 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "6c81875a-c561-51e9-a709-dc28690ebb9e"))
+  (junction
+    (at 266.7 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "f688b9d1-e2a1-53f2-91ab-a9ed7aed1b1a"))
+  (junction
+    (at 68.58 246.38)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e932ebbd-a366-5468-a381-59dd633b5f46"))
+  (junction
+    (at 121.92 246.38)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "7ef4561c-4196-5d4a-bc82-12d0f475c577"))
+  (junction
+    (at 251.46 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "d57035db-76be-556b-90f1-3a56cb1c12b6"))
+  (junction
+    (at 191.77 50.8)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "ae40d3fa-23ec-557b-aa62-8e36db5f49e8"))
+  (junction
+    (at 320.04 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "28a6a03d-f461-5554-8126-eec3201a4658"))
+  (junction
+    (at 191.77 152.4)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "4a615ada-ec18-5009-b231-ddafcb4ece83"))
+  (junction
+    (at 347.98 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "dabf9afe-791f-57ef-b911-7c16a5d4a482"))
+  (junction
+    (at 347.98 274.32)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e1e4576b-5322-54ed-81ca-efd6d794ff7d"))
+  (junction
+    (at 191.77 254)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "817c4121-a74d-5fd1-92a6-02dfb47309e0"))
+  (junction
+    (at 203.2 302.26)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "bc072143-f5ac-592a-999e-ee4c2f6650b2"))
+  (junction
+    (at 68.58 144.78)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "be5407f8-e8fc-51d5-b58a-f6ce40a85300"))
+  (junction
+    (at 284.48 172.72)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "0d856402-2c98-5e16-acc4-0376f909803d"))
+  (junction
+    (at 121.92 144.78)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "baa2c02e-79fd-56c9-ad3a-8cb1926535c9"))
+  (junction
+    (at 121.92 170.18)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "6ce63802-d9c9-5453-8dd0-9e523b921e75"))
+  (embedded_fonts no))

@@ -1,0 +1,30 @@
+# KiCad backups, caches, locks and local per-user state
+*-backups/
+*.kicad_prl
+fp-info-cache
+_autosave-*
+\#auto_saved_files#
+*.lck
+~*.lck
+*.bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+# KiCad plot/fab scratch output (commit only the curated files in hardware/)
+gerbers/
+fab/
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Device-tree build products
+*.dtbo
+*.dtb
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+# Never commit credentials
+.env
+*.pem
+*.key

@@ -1,0 +1,358 @@
+{
+ "generated_by": "tools/gen_interface.py",
+ "source": "hardware/kicad/wwan-carrier.net",
+ "expanders": [
+  {
+   "ref": "U801",
+   "addr": 32,
+   "init_output": [
+    0,
+    128
+   ],
+   "init_config": [
+    0,
+    0
+   ],
+   "lines": [
+    {
+     "name": "slot1-pwr-en",
+     "net": "SLOT1_PWR_EN",
+     "port": 0,
+     "bit": 0,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot1-fcpo-n",
+     "net": "SLOT1_FCPO_N",
+     "port": 0,
+     "bit": 1,
+     "dir": "out",
+     "active": "low",
+     "init": 0
+    },
+    {
+     "name": "slot1-reset",
+     "net": "SLOT1_RESET",
+     "port": 0,
+     "bit": 2,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot1-wdis",
+     "net": "SLOT1_WDIS",
+     "port": 0,
+     "bit": 3,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot1-pcie-en",
+     "net": "SLOT1_PCIE_EN",
+     "port": 0,
+     "bit": 4,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot2-pwr-en",
+     "net": "SLOT2_PWR_EN",
+     "port": 0,
+     "bit": 5,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot2-fcpo-n",
+     "net": "SLOT2_FCPO_N",
+     "port": 0,
+     "bit": 6,
+     "dir": "out",
+     "active": "low",
+     "init": 0
+    },
+    {
+     "name": "slot2-reset",
+     "net": "SLOT2_RESET",
+     "port": 0,
+     "bit": 7,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot2-wdis",
+     "net": "SLOT2_WDIS",
+     "port": 1,
+     "bit": 0,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot2-pcie-en",
+     "net": "SLOT2_PCIE_EN",
+     "port": 1,
+     "bit": 1,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot3-pwr-en",
+     "net": "SLOT3_PWR_EN",
+     "port": 1,
+     "bit": 2,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot3-fcpo-n",
+     "net": "SLOT3_FCPO_N",
+     "port": 1,
+     "bit": 3,
+     "dir": "out",
+     "active": "low",
+     "init": 0
+    },
+    {
+     "name": "slot3-reset",
+     "net": "SLOT3_RESET",
+     "port": 1,
+     "bit": 4,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot3-wdis",
+     "net": "SLOT3_WDIS",
+     "port": 1,
+     "bit": 5,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot3-pcie-en",
+     "net": "SLOT3_PCIE_EN",
+     "port": 1,
+     "bit": 6,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "hub-reset-n",
+     "net": "HUB_RESET_N",
+     "port": 1,
+     "bit": 7,
+     "dir": "out",
+     "active": "low",
+     "init": 1
+    }
+   ]
+  },
+  {
+   "ref": "U802",
+   "addr": 33,
+   "init_output": [
+    255,
+    243
+   ],
+   "init_config": [
+    255,
+    131
+   ],
+   "lines": [
+    {
+     "name": "slot1-pg",
+     "net": "SLOT1_PG",
+     "port": 0,
+     "bit": 0,
+     "dir": "in",
+     "active": "high",
+     "init": null
+    },
+    {
+     "name": "slot2-pg",
+     "net": "SLOT2_PG",
+     "port": 0,
+     "bit": 1,
+     "dir": "in",
+     "active": "high",
+     "init": null
+    },
+    {
+     "name": "slot3-pg",
+     "net": "SLOT3_PG",
+     "port": 0,
+     "bit": 2,
+     "dir": "in",
+     "active": "high",
+     "init": null
+    },
+    {
+     "name": "slot1-wake-n",
+     "net": "SLOT1_WAKE_N",
+     "port": 0,
+     "bit": 3,
+     "dir": "in",
+     "active": "low",
+     "init": null
+    },
+    {
+     "name": "slot2-wake-n",
+     "net": "SLOT2_WAKE_N",
+     "port": 0,
+     "bit": 4,
+     "dir": "in",
+     "active": "low",
+     "init": null
+    },
+    {
+     "name": "slot3-wake-n",
+     "net": "SLOT3_WAKE_N",
+     "port": 0,
+     "bit": 5,
+     "dir": "in",
+     "active": "low",
+     "init": null
+    },
+    {
+     "name": "pg-3v3",
+     "net": "PG_3V3",
+     "port": 0,
+     "bit": 6,
+     "dir": "in",
+     "active": "high",
+     "init": null
+    },
+    {
+     "name": "pg-0v95",
+     "net": "PG_0V95",
+     "port": 0,
+     "bit": 7,
+     "dir": "in",
+     "active": "high",
+     "init": null
+    },
+    {
+     "name": "pg-1v8",
+     "net": "PG_1V8",
+     "port": 1,
+     "bit": 0,
+     "dir": "in",
+     "active": "high",
+     "init": null
+    },
+    {
+     "name": "pg-1v2",
+     "net": "PG_1V2",
+     "port": 1,
+     "bit": 1,
+     "dir": "in",
+     "active": "high",
+     "init": null
+    },
+    {
+     "name": "user-led1",
+     "net": "USER_LED1",
+     "port": 1,
+     "bit": 2,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "user-led2",
+     "net": "USER_LED2",
+     "port": 1,
+     "bit": 3,
+     "dir": "out",
+     "active": "high",
+     "init": 0
+    },
+    {
+     "name": "slot1-pcie-sel",
+     "net": "SLOT1_PCIE_SEL",
+     "port": 1,
+     "bit": 4,
+     "dir": "out",
+     "active": "high",
+     "init": 1
+    },
+    {
+     "name": "slot2-pcie-sel",
+     "net": "SLOT2_PCIE_SEL",
+     "port": 1,
+     "bit": 5,
+     "dir": "out",
+     "active": "high",
+     "init": 1
+    },
+    {
+     "name": "slot3-pcie-sel",
+     "net": "SLOT3_PCIE_SEL",
+     "port": 1,
+     "bit": 6,
+     "dir": "out",
+     "active": "high",
+     "init": 1
+    },
+    {
+     "name": "spare7",
+     "net": "EXP_SPARE7",
+     "port": 1,
+     "bit": 7,
+     "dir": "spare",
+     "active": "-",
+     "init": null
+    }
+   ]
+  }
+ ],
+ "i2c": {
+  "PI7C9X3G606GP": 111,
+  "USB5744": 45,
+  "TCA6416A": 33
+ },
+ "pcie": [
+  {
+   "slot": 1,
+   "switch_port": 1,
+   "lane": 1
+  },
+  {
+   "slot": 2,
+   "switch_port": 4,
+   "lane": 2
+  },
+  {
+   "slot": 3,
+   "switch_port": 5,
+   "lane": 3
+  }
+ ],
+ "usb": [
+  {
+   "slot": 1,
+   "hub_port": 1
+  },
+  {
+   "slot": 2,
+   "hub_port": 2
+  },
+  {
+   "slot": 3,
+   "hub_port": 3
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+flowchart LR
+  %% Spin 1 bench prototype (rev 0.2) - FRDM-IMX95 + custom WWAN carrier, budget < $1,500
+  subgraph FRDM["NXP FRDM-IMX95 dev board ($210)"]
+    SOC["i.MX 95 (15x15)<br/>8 GB LPDDR4X, 32 GB eMMC"]
+    MK["M.2 Key-M<br/>PCIe Gen3 x1"]
+    USB3["USB3 Type-C"]
+    ETH1["GbE RJ45 #1 (LAN)"]
+    ETH2["GbE RJ45 #2"]
+    CAN["2x CAN (TJA1051)"]
+    WIFI["IW612 Wi-Fi 6 / BT M.2"]
+    SOC --- MK
+    SOC --- USB3
+    SOC --- ETH1
+    SOC --- ETH2
+    SOC --- CAN
+    SOC --- WIFI
+  end
+  CABLE["ADT-Link M41<br/>M.2-M → PCIe x1 cable"]
+  MK --> CABLE
+
+  subgraph CARRIER["Custom WWAN carrier (JLCPCB 6-layer PCBA)"]
+    EDGE["PCIe x1 gold-finger edge"]
+    PSW["PI7C9X3G606GP<br/>PCIe Gen3 switch"]
+    HUB["USB5744 hub<br/>(fallback, optional)"]
+    S1["M.2 Key-B #1<br/>RM520N-GL (5G)"]
+    S2["M.2 Key-B #2<br/>EM060K-GL or RM520N"]
+    S3["M.2 Key-B #3<br/>EM060K-GL or RM520N"]
+    P12["12 V in → TVS + LM74800-Q1"]
+    BK["3x 3.7 V / 6 A bucks<br/>(1 per modem, EN by host)<br/>+ 3.3 V + 0.95 V"]
+    SIMS["3x nano-SIM<br/>(3 carriers)"]
+    EDGE --> PSW
+    PSW --> S1
+    PSW --> S2
+    PSW --> S3
+    HUB -.-> S1
+    HUB -.-> S2
+    HUB -.-> S3
+    P12 --> BK
+    BK --> S1
+    BK --> S2
+    BK --> S3
+    SIMS --- S1
+    SIMS --- S2
+    SIMS --- S3
+  end
+  CABLE --> EDGE
+  USB3 -.-> HUB
+  ANT["12x MHF4→SMA pigtails<br/>+ 600-6000 MHz dipoles"]
+  S1 --- ANT
+  S2 --- ANT
+  S3 --- ANT
+  SAT["Satellite terminal (Ethernet)"]
+  ETH2 --> SAT
